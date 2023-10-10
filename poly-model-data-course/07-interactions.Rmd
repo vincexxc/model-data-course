@@ -1,0 +1,12 @@
+## Interactions
+
+### Types of interactions and functional responses (in continuous and discrete time)
+Chemical kinetics to invent functional responses
+
+### Lotka-Volterra
+
+### Food-web models (niche, cascade, …)
+
+### Network analysis (primer)
+
+### Random matrices

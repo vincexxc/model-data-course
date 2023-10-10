@@ -113,14 +113,14 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same}
 \hypersetup{
-  pdftitle={A Minimal Book Example},
-  pdfauthor={John Doe},
+  pdftitle={Theory-driven analysis of ecological data: a practical handbook},
+  pdfauthor={us},
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 
-\title{A Minimal Book Example}
-\author{John Doe}
-\date{2023-10-06}
+\title{Theory-driven analysis of ecological data: a practical handbook}
+\author{us}
+\date{2023-10-10}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -146,7 +146,7 @@
 \setcounter{tocdepth}{1}
 \tableofcontents
 }
-\chapter{About}\label{about}
+\chapter{About Bookdown}\label{about-bookdown}
 
 This is a \emph{sample} book written in \textbf{Markdown}. You can use anything that Pandoc's Markdown supports; for example, a math equation \(a^2 + b^2 = c^2\).
 
@@ -190,24 +190,24 @@ As you work, you may start a local server to live preview this HTML book. This p
 \end{Highlighting}
 \end{Shaded}
 
-\chapter{Hello bookdown}\label{hello-bookdown}
+\section{Here are some useful things for writing the book using bookdown}\label{here-are-some-useful-things-for-writing-the-book-using-bookdown}
 
 All chapters start with a first-level heading followed by your chapter title, like the line above. There should be only one first-level heading (\texttt{\#}) per .Rmd file.
 
-\section{A section}\label{a-section}
+\subsection{A section}\label{a-section}
 
 All chapter sections start with a second-level (\texttt{\#\#}) or higher heading followed by your section title, like the sections above and below here. You can have as many as you want within a chapter.
 
-\subsection*{An unnumbered section}\label{an-unnumbered-section}
-\addcontentsline{toc}{subsection}{An unnumbered section}
+\subsubsection*{An unnumbered section}\label{an-unnumbered-section}
+\addcontentsline{toc}{subsubsection}{An unnumbered section}
 
 Chapters and sections are numbered by default. To un-number a heading, add a \texttt{\{.unnumbered\}} or the shorter \texttt{\{-\}} at the end of the heading, like in this section.
 
-\chapter{Cross-references}\label{cross}
+\section{Cross-references}\label{cross}
 
 Cross-references make it easier for your readers to find and link to elements in your book.
 
-\section{Chapters and sub-chapters}\label{chapters-and-sub-chapters}
+\subsection{Chapters and sub-chapters}\label{chapters-and-sub-chapters}
 
 There are two steps to cross-reference any heading:
 
@@ -234,7 +234,7 @@ There are two steps to cross-reference any heading:
   \end{itemize}
 \end{enumerate}
 
-\section{Captioned figures and tables}\label{captioned-figures-and-tables}
+\subsection{Captioned figures and tables}\label{captioned-figures-and-tables}
 
 Figures and tables \emph{with captions} can also be cross-referenced from elsewhere in your book using \texttt{\textbackslash{}@ref(fig:chunk-label)} and \texttt{\textbackslash{}@ref(tab:chunk-label)}, respectively.
 
@@ -290,7 +290,7 @@ temperature & pressure\\
 \end{tabular}
 \end{table}
 
-\chapter{Parts}\label{parts}
+\section{Parts}\label{parts}
 
 You can add parts to organize one or more book chapters together. Parts can be inserted at the top of an .Rmd file, before the first-level chapter heading in that same file.
 
@@ -300,13 +300,13 @@ Add an unnumbered part: \texttt{\#\ (PART\textbackslash{}*)\ Act\ one\ \{-\}} (f
 
 Add an appendix as a special kind of un-numbered part: \texttt{\#\ (APPENDIX)\ Other\ stuff\ \{-\}} (followed by \texttt{\#\ A\ chapter}). Chapters in an appendix are prepended with letters instead of numbers.
 
-\chapter{Footnotes and citations}\label{footnotes-and-citations}
+\section{Footnotes and citations}\label{footnotes-and-citations}
 
-\section{Footnotes}\label{footnotes}
+\subsection{Footnotes}\label{footnotes}
 
 Footnotes are put inside the square brackets after a caret \texttt{\^{}{[}{]}}. Like this one \footnote{This is a footnote.}.
 
-\section{Citations}\label{citations}
+\subsection{Citations}\label{citations}
 
 Reference items in your bibliography file(s) using \texttt{@key}.
 
@@ -315,9 +315,9 @@ Note that the \texttt{.bib} files need to be listed in the index.Rmd with the YA
 
 The RStudio Visual Markdown Editor can also make it easier to insert citations: \url{https://rstudio.github.io/visual-markdown-editing/\#/citations}
 
-\chapter{Blocks}\label{blocks}
+\section{Blocks}\label{blocks}
 
-\section{Equations}\label{equations}
+\subsection{Equations}\label{equations}
 
 Here is an equation.
 
@@ -328,7 +328,7 @@ Here is an equation.
 
 You may refer to using \texttt{\textbackslash{}@ref(eq:binom)}, like see Equation \eqref{eq:binom}.
 
-\section{Theorems and proofs}\label{theorems-and-proofs}
+\subsection{Theorems and proofs}\label{theorems-and-proofs}
 
 Labeled theorems can be referenced in text using \texttt{\textbackslash{}@ref(thm:tri)}, for example, check out this smart theorem \ref{thm:tri}.
 
@@ -340,21 +340,21 @@ and \(a\) and \(b\) denote the lengths of the \textbf{other} two sides, we have
 
 Read more here \url{https://bookdown.org/yihui/bookdown/markdown-extensions-by-bookdown.html}.
 
-\section{Callout blocks}\label{callout-blocks}
+\subsection{Callout blocks}\label{callout-blocks}
 
 The R Markdown Cookbook provides more help on how to use custom blocks to design your own callouts: \url{https://bookdown.org/yihui/rmarkdown-cookbook/custom-blocks.html}
 
-\chapter{Sharing your book}\label{sharing-your-book}
+\section{Sharing your book}\label{sharing-your-book}
 
-\section{Publishing}\label{publishing}
+\subsection{Publishing}\label{publishing}
 
 HTML books can be published online, see: \url{https://bookdown.org/yihui/bookdown/publishing.html}
 
-\section{404 pages}\label{pages}
+\subsection{404 pages}\label{pages}
 
 By default, users will be directed to a 404 page if they try to access a webpage that cannot be found. If you'd like to customize your 404 page instead of using the default, you may add either a \texttt{\_404.Rmd} or \texttt{\_404.md} file to your project root and use code and/or Markdown syntax.
 
-\section{Metadata for sharing}\label{metadata-for-sharing}
+\subsection{Metadata for sharing}\label{metadata-for-sharing}
 
 Bookdown HTML books will provide HTML metadata for social sharing on platforms like Twitter, Facebook, and LinkedIn, using information you provide in the \texttt{index.Rmd} YAML. To setup, set the \texttt{url} for your book and the path to your \texttt{cover-image} file. Your book's \texttt{title} and \texttt{description} are also used.
 
@@ -374,6 +374,128 @@ Or use:
 \end{Highlighting}
 \end{Shaded}
 
+\chapter{Preambule}\label{preambule}
+
+Who is the textbook for?
+
+\chapter{Background (more fancy title needed)}\label{background-more-fancy-title-needed}
+
+\section{Modelling in ecology}\label{modelling-in-ecology}
+
+\subsection{A quick history}\label{a-quick-history}
+
+\subsection{Specificities of ecology}\label{specificities-of-ecology}
+
+Variability + time*space + local interactions + observations through both experiments and field studies + open systems
+Formalisation,simplifications often used in ecology, assumptions, \ldots{}
+
+\subsection{Ecological data, uncertainties, sampling}\label{ecological-data-uncertainties-sampling}
+
+At different organisational scales: individual, population, community, ecosystem and all meta-
+
+\subsection{Mathematical modelling / computational approaches (lots to discuss here from Game of life type stuff/von Neumann to IBMs/ABMs note: Grimm is not universally representative ;-) ) ?}\label{mathematical-modelling-computational-approaches-lots-to-discuss-here-from-game-of-life-type-stuffvon-neumann-to-ibmsabms-note-grimm-is-not-universally-representative--}
+
+\subsection{Appendices: Primer on vectors and matrices (multidimensional data)}\label{appendices-primer-on-vectors-and-matrices-multidimensional-data}
+
+\subsection{Appendices: Primer on analysis, dérivées, Taylor series, minimum/maximum\ldots{}}\label{appendices-primer-on-analysis-duxe9rivuxe9es-taylor-series-minimummaximum}
+
+\subsection{Appendices: Removing dimensions, dimensional analysis}\label{appendices-removing-dimensions-dimensional-analysis}
+
+\chapter{Mathematical (or ``process-based''?) modeling}\label{mathematical-or-process-based-modeling}
+
+Intro pour expliquer la logique de l'agencement des chapitres
+
+\section{Finite numbers of individuals (stochastic models)}\label{finite-numbers-of-individuals-stochastic-models}
+
+\subsection{Stochastic individual-based simulations}\label{stochastic-individual-based-simulations}
+
+\subsection{Primer on probabilities (random variables, discrete and continuous distributions, PGF and MGF, central limit theorem)}\label{primer-on-probabilities-random-variables-discrete-and-continuous-distributions-pgf-and-mgf-central-limit-theorem}
+
+\subsection{Small populations and branching processes}\label{small-populations-and-branching-processes}
+
+\subsection{Markov chains (ergodicity, absorbing states)}\label{markov-chains-ergodicity-absorbing-states}
+
+\subsection{Master equations, moment closure?}\label{master-equations-moment-closure}
+
+\subsection{PDEs, diffusion}\label{pdes-diffusion}
+
+\subsection{Boxes: algo Gillespie + refinements ; generating random numbers according to defined distributions}\label{boxes-algo-gillespie-refinements-generating-random-numbers-according-to-defined-distributions}
+
+\section{Large numbers (dynamical systems; and ways to analyse them)}\label{large-numbers-dynamical-systems-and-ways-to-analyse-them}
+
+\subsection{Primer on analysis (derivatives, attractors, stability, permanence, jacobian, changes of variables\ldots{} + analytical approximations: Taylor series, delta method)}\label{primer-on-analysis-derivatives-attractors-stability-permanence-jacobian-changes-of-variables-analytical-approximations-taylor-series-delta-method}
+
+\subsection{Difference equations (ex: fibonacci)}\label{difference-equations-ex-fibonacci}
+
+\subsection{ODEs (example: malthus and logistic)}\label{odes-example-malthus-and-logistic}
+
+\subsection{Stage-structured / physiologically structured / compartment models (R0, Euler-Lotka, reproductive values, eigenvalue-based growth rate\ldots)}\label{stage-structured-physiologically-structured-compartment-models-r0-euler-lotka-reproductive-values-eigenvalue-based-growth-rate}
+
+\subsection{Boxes: integration schemes (Euler et al.)}\label{boxes-integration-schemes-euler-et-al.}
+
+\section{Reintroducing stochasticity (dynamical systems with noise)}\label{reintroducing-stochasticity-dynamical-systems-with-noise}
+
+\subsection{Environmental stochasticity / demographic stochasticity}\label{environmental-stochasticity-demographic-stochasticity}
+
+\section{Spatial structure}\label{spatial-structure}
+
+\subsection{Implicit space and patches}\label{implicit-space-and-patches}
+
+\subsection{Explicit discrete space (networks and lattices)}\label{explicit-discrete-space-networks-and-lattices}
+
+\subsection{Explicit continuous spaces (PDEs)}\label{explicit-continuous-spaces-pdes}
+
+\subsection{Models of dispersal and foraging (kernels, brownian motion, Lévy walk, optimal foraging\ldots)}\label{models-of-dispersal-and-foraging-kernels-brownian-motion-luxe9vy-walk-optimal-foraging}
+
+\section{Interactions}\label{interactions}
+
+\subsection{Types of interactions and functional responses (in continuous and discrete time)}\label{types-of-interactions-and-functional-responses-in-continuous-and-discrete-time}
+
+Chemical kinetics to invent functional responses
+
+\subsection{Lotka-Volterra}\label{lotka-volterra}
+
+\subsection{Food-web models (niche, cascade, \ldots)}\label{food-web-models-niche-cascade}
+
+\subsection{Network analysis (primer)}\label{network-analysis-primer}
+
+\subsection{Random matrices}\label{random-matrices}
+
+\section{Links between ecology and evolution}\label{links-between-ecology-and-evolution}
+
+\subsection{Historical overview (incl.~common processes cf Vellend etc; globally cf.~for example Huneman 2019; and maybe ELE special issue 2023)}\label{historical-overview-incl.-common-processes-cf-vellend-etc-globally-cf.-for-example-huneman-2019-and-maybe-ele-special-issue-2023}
+
+\subsection{Timescales}\label{timescales}
+
+\subsection{Frameworks (AD, QG, oligomorphic dynamics, IBMs)}\label{frameworks-ad-qg-oligomorphic-dynamics-ibms}
+
+\chapter{Linking process-based models to data - the statistical interface}\label{linking-process-based-models-to-data---the-statistical-interface}
+
+\section{Linking process-based models to data: the statistical interface}\label{linking-process-based-models-to-data-the-statistical-interface}
+
+\subsection{How to confront models and data: from qualitative to quantitative (overview of existing lit)}\label{how-to-confront-models-and-data-from-qualitative-to-quantitative-overview-of-existing-lit}
+
+\subsection{Models on sampling uncertainty, sources of variability (types of error, non-observed states etc?)}\label{models-on-sampling-uncertainty-sources-of-variability-types-of-error-non-observed-states-etc}
+
+\subsection{Learning and validation}\label{learning-and-validation}
+
+\section{Model fitting}\label{model-fitting}
+
+\subsection{Distances between model predictions and data (least square\ldots)}\label{distances-between-model-predictions-and-data-least-square}
+
+\subsection{Likelihood}\label{likelihood}
+
+Bayesian,
+MCMC,
+ABC
+
+\section{Model selection}\label{model-selection}
+
+\subsection{Model selection and Information criteria, model averaging/Burnham-Anderson stuff}\label{model-selection-and-information-criteria-model-averagingburnham-anderson-stuff}
+
+\subsection{Penalised regression (lasso, ridge, etc.)}\label{penalised-regression-lasso-ridge-etc.}
+
+\subsection{Machine learning approaches (random forest, neural networks, \ldots)}\label{machine-learning-approaches-random-forest-neural-networks}
 
   \bibliography{book.bib,packages.bib}
 

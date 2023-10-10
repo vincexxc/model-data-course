@@ -1,5 +1,25 @@
-h1:about About
+h1:about-bookdown About Bookdown
 h2:usage Usage
 h2:render-book Render book
 h2:preview-book Preview book
+h2:here-are-some-useful-things-for-writing-the-book-using-bookdown Here are some useful things for writing the book using bookdown
+h3:a-section A section
+h4:an-unnumbered-section An unnumbered section
+h2:cross Cross-references
+h3:chapters-and-sub-chapters Chapters and sub-chapters
+h3:captioned-figures-and-tables Captioned figures and tables
+fig:nice-fig Here is a nice figure!
+tab:nice-tab Here is a nice table!
+h2:parts Parts
+h2:footnotes-and-citations Footnotes and citations
+h3:footnotes Footnotes
+h3:citations Citations
+h2:blocks Blocks
+h3:equations Equations
+h3:theorems-and-proofs Theorems and proofs
+h3:callout-blocks Callout blocks
+h2:sharing-your-book Sharing your book
+h3:publishing Publishing
+h3:pages 404 pages
+h3:metadata-for-sharing Metadata for sharing
 

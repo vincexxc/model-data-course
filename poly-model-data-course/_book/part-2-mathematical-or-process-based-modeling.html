@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 4 Part 2: Mathematical (or “process-based”?) modeling (???) | Theory-driven analysis of ecological data: a practical handbook</title>
+  <meta name="description" content="<p>This is a draft for our course on model-data.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 4 Part 2: Mathematical (or “process-based”?) modeling (???) | Theory-driven analysis of ecological data: a practical handbook" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="<p>This is a draft for our course on model-data.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 4 Part 2: Mathematical (or “process-based”?) modeling (???) | Theory-driven analysis of ecological data: a practical handbook" />
+  
+  <meta name="twitter:description" content="<p>This is a draft for our course on model-data.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  
+
+<meta name="author" content="us" />
+
+
+<meta name="date" content="2023-10-10" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="part-1-background-more-fancy-title-needed.html"/>
+<link rel="next" href="part-3-linking-process-based-models-to-data---the-statistical-interface.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#usage"><i class="fa fa-check"></i><b>1.1</b> Usage</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#render-book"><i class="fa fa-check"></i><b>1.2</b> Render book</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#preview-book"><i class="fa fa-check"></i><b>1.3</b> Preview book</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#here-are-some-useful-things-for-writing-the-book-using-bookdown"><i class="fa fa-check"></i><b>1.4</b> Here are some useful things for writing the book using bookdown</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="index.html"><a href="index.html#a-section"><i class="fa fa-check"></i><b>1.4.1</b> A section</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#cross"><i class="fa fa-check"></i><b>1.5</b> Cross-references</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="index.html"><a href="index.html#chapters-and-sub-chapters"><i class="fa fa-check"></i><b>1.5.1</b> Chapters and sub-chapters</a></li>
+<li class="chapter" data-level="1.5.2" data-path="index.html"><a href="index.html#captioned-figures-and-tables"><i class="fa fa-check"></i><b>1.5.2</b> Captioned figures and tables</a></li>
+</ul></li>
+<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#parts"><i class="fa fa-check"></i><b>1.6</b> Parts</a></li>
+<li class="chapter" data-level="1.7" data-path="index.html"><a href="index.html#footnotes-and-citations"><i class="fa fa-check"></i><b>1.7</b> Footnotes and citations</a>
+<ul>
+<li class="chapter" data-level="1.7.1" data-path="index.html"><a href="index.html#footnotes"><i class="fa fa-check"></i><b>1.7.1</b> Footnotes</a></li>
+<li class="chapter" data-level="1.7.2" data-path="index.html"><a href="index.html#citations"><i class="fa fa-check"></i><b>1.7.2</b> Citations</a></li>
+</ul></li>
+<li class="chapter" data-level="1.8" data-path="index.html"><a href="index.html#blocks"><i class="fa fa-check"></i><b>1.8</b> Blocks</a>
+<ul>
+<li class="chapter" data-level="1.8.1" data-path="index.html"><a href="index.html#equations"><i class="fa fa-check"></i><b>1.8.1</b> Equations</a></li>
+<li class="chapter" data-level="1.8.2" data-path="index.html"><a href="index.html#theorems-and-proofs"><i class="fa fa-check"></i><b>1.8.2</b> Theorems and proofs</a></li>
+<li class="chapter" data-level="1.8.3" data-path="index.html"><a href="index.html#callout-blocks"><i class="fa fa-check"></i><b>1.8.3</b> Callout blocks</a></li>
+</ul></li>
+<li class="chapter" data-level="1.9" data-path="index.html"><a href="index.html#sharing-your-book"><i class="fa fa-check"></i><b>1.9</b> Sharing your book</a>
+<ul>
+<li class="chapter" data-level="1.9.1" data-path="index.html"><a href="index.html#publishing"><i class="fa fa-check"></i><b>1.9.1</b> Publishing</a></li>
+<li class="chapter" data-level="1.9.2" data-path="index.html"><a href="index.html#pages"><i class="fa fa-check"></i><b>1.9.2</b> 404 pages</a></li>
+<li class="chapter" data-level="1.9.3" data-path="index.html"><a href="index.html#metadata-for-sharing"><i class="fa fa-check"></i><b>1.9.3</b> Metadata for sharing</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#references"><i class="fa fa-check"></i>References</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="preambule.html"><a href="preambule.html"><i class="fa fa-check"></i><b>2</b> Preambule</a></li>
+<li class="chapter" data-level="3" data-path="part-1-background-more-fancy-title-needed.html"><a href="part-1-background-more-fancy-title-needed.html"><i class="fa fa-check"></i><b>3</b> Part 1: Background (more fancy title needed)</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="part-1-background-more-fancy-title-needed.html"><a href="part-1-background-more-fancy-title-needed.html#chap-i-modelling-in-ecology"><i class="fa fa-check"></i><b>3.1</b> Chap I: modelling in ecology</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="part-1-background-more-fancy-title-needed.html"><a href="part-1-background-more-fancy-title-needed.html#i.1.-a-quick-history"><i class="fa fa-check"></i><b>3.1.1</b> I.1. A quick history</a></li>
+<li class="chapter" data-level="3.1.2" data-path="part-1-background-more-fancy-title-needed.html"><a href="part-1-background-more-fancy-title-needed.html#i.2.-specificities-of-ecology"><i class="fa fa-check"></i><b>3.1.2</b> I.2. Specificities of ecology</a></li>
+<li class="chapter" data-level="3.1.3" data-path="part-1-background-more-fancy-title-needed.html"><a href="part-1-background-more-fancy-title-needed.html#i.3.-ecological-data-uncertainties-sampling"><i class="fa fa-check"></i><b>3.1.3</b> I.3. Ecological data, uncertainties, sampling</a></li>
+<li class="chapter" data-level="3.1.4" data-path="part-1-background-more-fancy-title-needed.html"><a href="part-1-background-more-fancy-title-needed.html#i.4.-mathematical-modelling-computational-approaches-lots-to-discuss-here-from-game-of-life-type-stuffvon-neumann-to-ibmsabms-note-grimm-is-not-universally-representative--"><i class="fa fa-check"></i><b>3.1.4</b> I.4. Mathematical modelling / computational approaches (lots to discuss here from Game of life type stuff/von Neumann to IBMs/ABMs note: Grimm is not universally representative ;-) ) ?</a></li>
+<li class="chapter" data-level="3.1.5" data-path="part-1-background-more-fancy-title-needed.html"><a href="part-1-background-more-fancy-title-needed.html#appendices-primer-on-vectors-and-matrices-multidimensional-data"><i class="fa fa-check"></i><b>3.1.5</b> Appendices: Primer on vectors and matrices (multidimensional data)</a></li>
+<li class="chapter" data-level="3.1.6" data-path="part-1-background-more-fancy-title-needed.html"><a href="part-1-background-more-fancy-title-needed.html#appendices-primer-on-analysis-dérivées-taylor-series-minimummaximum"><i class="fa fa-check"></i><b>3.1.6</b> Appendices: Primer on analysis, dérivées, Taylor series, minimum/maximum…</a></li>
+<li class="chapter" data-level="3.1.7" data-path="part-1-background-more-fancy-title-needed.html"><a href="part-1-background-more-fancy-title-needed.html#appendices-removing-dimensions-dimensional-analysis"><i class="fa fa-check"></i><b>3.1.7</b> Appendices: Removing dimensions, dimensional analysis</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="part-2-mathematical-or-process-based-modeling.html"><a href="part-2-mathematical-or-process-based-modeling.html"><i class="fa fa-check"></i><b>4</b> Part 2: Mathematical (or “process-based”?) modeling (???)</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="part-2-mathematical-or-process-based-modeling.html"><a href="part-2-mathematical-or-process-based-modeling.html#chap-ii-finite-numbers-of-individuals-stochastic-models"><i class="fa fa-check"></i><b>4.1</b> Chap II: Finite numbers of individuals (stochastic models)</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="part-2-mathematical-or-process-based-modeling.html"><a href="part-2-mathematical-or-process-based-modeling.html#ii.0.-stochastic-individual-based-simulations"><i class="fa fa-check"></i><b>4.1.1</b> II.0. Stochastic individual-based simulations</a></li>
+<li class="chapter" data-level="4.1.2" data-path="part-2-mathematical-or-process-based-modeling.html"><a href="part-2-mathematical-or-process-based-modeling.html#ii.1.-primer-on-probabilities-random-variables-discrete-and-continuous-distributions-pgf-and-mgf-central-limit-theorem"><i class="fa fa-check"></i><b>4.1.2</b> II.1. Primer on probabilities (random variables, discrete and continuous distributions, PGF and MGF, central limit theorem)</a></li>
+<li class="chapter" data-level="4.1.3" data-path="part-2-mathematical-or-process-based-modeling.html"><a href="part-2-mathematical-or-process-based-modeling.html#ii.2.-small-populations-and-branching-processes"><i class="fa fa-check"></i><b>4.1.3</b> II.2. Small populations and branching processes</a></li>
+<li class="chapter" data-level="4.1.4" data-path="part-2-mathematical-or-process-based-modeling.html"><a href="part-2-mathematical-or-process-based-modeling.html#ii.3.-markov-chains-ergodicity-absorbing-states"><i class="fa fa-check"></i><b>4.1.4</b> II.3. Markov chains (ergodicity, absorbing states)</a></li>
+<li class="chapter" data-level="4.1.5" data-path="part-2-mathematical-or-process-based-modeling.html"><a href="part-2-mathematical-or-process-based-modeling.html#ii.4.-master-equations-moment-closure"><i class="fa fa-check"></i><b>4.1.5</b> II.4. Master equations, moment closure?</a></li>
+<li class="chapter" data-level="4.1.6" data-path="part-2-mathematical-or-process-based-modeling.html"><a href="part-2-mathematical-or-process-based-modeling.html#ii.5.-pdes-diffusion"><i class="fa fa-check"></i><b>4.1.6</b> II.5. PDEs, diffusion</a></li>
+<li class="chapter" data-level="4.1.7" data-path="part-2-mathematical-or-process-based-modeling.html"><a href="part-2-mathematical-or-process-based-modeling.html#boxes-algo-gillespie-refinements-generating-random-numbers-according-to-defined-distributions"><i class="fa fa-check"></i><b>4.1.7</b> Boxes: algo Gillespie + refinements ; generating random numbers according to defined distributions</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="part-2-mathematical-or-process-based-modeling.html"><a href="part-2-mathematical-or-process-based-modeling.html#chap-iii-large-numbers-dynamical-systems-and-ways-to-analyse-them"><i class="fa fa-check"></i><b>4.2</b> Chap III: Large numbers (dynamical systems; and ways to analyse them)</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="part-2-mathematical-or-process-based-modeling.html"><a href="part-2-mathematical-or-process-based-modeling.html#iii.1.-primer-on-analysis-derivatives-attractors-stability-permanence-jacobian-changes-of-variables-analytical-approximations-taylor-series-delta-method"><i class="fa fa-check"></i><b>4.2.1</b> III.1. Primer on analysis (derivatives, attractors, stability, permanence, jacobian, changes of variables… + analytical approximations: Taylor series, delta method)</a></li>
+<li class="chapter" data-level="4.2.2" data-path="part-2-mathematical-or-process-based-modeling.html"><a href="part-2-mathematical-or-process-based-modeling.html#iii.2.-difference-equations-ex-fibonacci"><i class="fa fa-check"></i><b>4.2.2</b> III.2. Difference equations (ex: fibonacci)</a></li>
+<li class="chapter" data-level="4.2.3" data-path="part-2-mathematical-or-process-based-modeling.html"><a href="part-2-mathematical-or-process-based-modeling.html#iii.3.-odes-example-malthus-and-logistic"><i class="fa fa-check"></i><b>4.2.3</b> III.3. ODEs (example: malthus and logistic)</a></li>
+<li class="chapter" data-level="4.2.4" data-path="part-2-mathematical-or-process-based-modeling.html"><a href="part-2-mathematical-or-process-based-modeling.html#iii.4.-stage-structured-physiologically-structured-compartment-models-r0-euler-lotka-reproductive-values-eigenvalue-based-growth-rate"><i class="fa fa-check"></i><b>4.2.4</b> III.4. Stage-structured / physiologically structured / compartment models (R0, Euler-Lotka, reproductive values, eigenvalue-based growth rate…)</a></li>
+<li class="chapter" data-level="4.2.5" data-path="part-2-mathematical-or-process-based-modeling.html"><a href="part-2-mathematical-or-process-based-modeling.html#boxes-integration-schemes-euler-et-al."><i class="fa fa-check"></i><b>4.2.5</b> Boxes: integration schemes (Euler et al.)</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="part-2-mathematical-or-process-based-modeling.html"><a href="part-2-mathematical-or-process-based-modeling.html#reintroducing-stochasticity-dynamical-systems-with-noise"><i class="fa fa-check"></i><b>4.3</b> Reintroducing stochasticity (dynamical systems with noise)</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="part-2-mathematical-or-process-based-modeling.html"><a href="part-2-mathematical-or-process-based-modeling.html#environmental-stochasticity-demographic-stochasticity"><i class="fa fa-check"></i><b>4.3.1</b> Environmental stochasticity / demographic stochasticity</a></li>
+<li class="chapter" data-level="4.3.2" data-path="part-2-mathematical-or-process-based-modeling.html"><a href="part-2-mathematical-or-process-based-modeling.html#section"><i class="fa fa-check"></i><b>4.3.2</b> ?</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="part-2-mathematical-or-process-based-modeling.html"><a href="part-2-mathematical-or-process-based-modeling.html#chap-v-spatial-structure"><i class="fa fa-check"></i><b>4.4</b> Chap V: spatial structure</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="part-2-mathematical-or-process-based-modeling.html"><a href="part-2-mathematical-or-process-based-modeling.html#v.1.-implicit-space-and-patches"><i class="fa fa-check"></i><b>4.4.1</b> V.1. Implicit space and patches</a></li>
+<li class="chapter" data-level="4.4.2" data-path="part-2-mathematical-or-process-based-modeling.html"><a href="part-2-mathematical-or-process-based-modeling.html#v.2.-explicit-discrete-space-networks-and-lattices"><i class="fa fa-check"></i><b>4.4.2</b> V.2. Explicit discrete space (networks and lattices)</a></li>
+<li class="chapter" data-level="4.4.3" data-path="part-2-mathematical-or-process-based-modeling.html"><a href="part-2-mathematical-or-process-based-modeling.html#v.3.-explicit-continuous-spaces-pdes"><i class="fa fa-check"></i><b>4.4.3</b> V.3. Explicit continuous spaces (PDEs)</a></li>
+<li class="chapter" data-level="4.4.4" data-path="part-2-mathematical-or-process-based-modeling.html"><a href="part-2-mathematical-or-process-based-modeling.html#v.4.-models-of-dispersal-and-foraging-kernels-brownian-motion-lévy-walk-optimal-foraging"><i class="fa fa-check"></i><b>4.4.4</b> V.4. Models of dispersal and foraging (kernels, brownian motion, Lévy walk, optimal foraging…)</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="part-2-mathematical-or-process-based-modeling.html"><a href="part-2-mathematical-or-process-based-modeling.html#chap-vi-interactions"><i class="fa fa-check"></i><b>4.5</b> Chap VI: interactions</a>
+<ul>
+<li class="chapter" data-level="4.5.1" data-path="part-2-mathematical-or-process-based-modeling.html"><a href="part-2-mathematical-or-process-based-modeling.html#vi.1.-types-of-interactions-and-functional-responses-in-continuous-and-discrete-time"><i class="fa fa-check"></i><b>4.5.1</b> VI.1. Types of interactions and functional responses (in continuous and discrete time)</a></li>
+<li class="chapter" data-level="4.5.2" data-path="part-2-mathematical-or-process-based-modeling.html"><a href="part-2-mathematical-or-process-based-modeling.html#vi.2.-lotka-volterra"><i class="fa fa-check"></i><b>4.5.2</b> VI.2. Lotka-Volterra</a></li>
+<li class="chapter" data-level="4.5.3" data-path="part-2-mathematical-or-process-based-modeling.html"><a href="part-2-mathematical-or-process-based-modeling.html#vi.3.-food-web-models-niche-cascade"><i class="fa fa-check"></i><b>4.5.3</b> VI.3. Food-web models (niche, cascade, …)</a></li>
+<li class="chapter" data-level="4.5.4" data-path="part-2-mathematical-or-process-based-modeling.html"><a href="part-2-mathematical-or-process-based-modeling.html#vi.4.-network-analysis-primer"><i class="fa fa-check"></i><b>4.5.4</b> VI.4. Network analysis (primer)</a></li>
+<li class="chapter" data-level="4.5.5" data-path="part-2-mathematical-or-process-based-modeling.html"><a href="part-2-mathematical-or-process-based-modeling.html#vi.5.-random-matrices"><i class="fa fa-check"></i><b>4.5.5</b> VI.5. Random matrices</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6" data-path="part-2-mathematical-or-process-based-modeling.html"><a href="part-2-mathematical-or-process-based-modeling.html#chap.-vii-links-between-ecology-and-evolution"><i class="fa fa-check"></i><b>4.6</b> Chap. VII: Links between ecology and evolution</a>
+<ul>
+<li class="chapter" data-level="4.6.1" data-path="part-2-mathematical-or-process-based-modeling.html"><a href="part-2-mathematical-or-process-based-modeling.html#vii.1.-historical-overview-incl.-common-processes-cf-vellend-etc-globally-cf.-for-example-huneman-2019-and-maybe-ele-special-issue-2023"><i class="fa fa-check"></i><b>4.6.1</b> VII.1. Historical overview (incl. common processes cf Vellend etc; globally cf. for example Huneman 2019; and maybe ELE special issue 2023)</a></li>
+<li class="chapter" data-level="4.6.2" data-path="part-2-mathematical-or-process-based-modeling.html"><a href="part-2-mathematical-or-process-based-modeling.html#vii.2.-timescales"><i class="fa fa-check"></i><b>4.6.2</b> VII.2. Timescales</a></li>
+<li class="chapter" data-level="4.6.3" data-path="part-2-mathematical-or-process-based-modeling.html"><a href="part-2-mathematical-or-process-based-modeling.html#vii.3.-frameworks-ad-qg-oligomorphic-dynamics-ibms"><i class="fa fa-check"></i><b>4.6.3</b> VII.3. Frameworks (AD, QG, oligomorphic dynamics, IBMs)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="part-3-linking-process-based-models-to-data---the-statistical-interface.html"><a href="part-3-linking-process-based-models-to-data---the-statistical-interface.html"><i class="fa fa-check"></i><b>5</b> Part 3: Linking process-based models to data - the statistical interface</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="part-3-linking-process-based-models-to-data---the-statistical-interface.html"><a href="part-3-linking-process-based-models-to-data---the-statistical-interface.html#chap.-viii-linking-process-based-models-to-data-the-statistical-interface"><i class="fa fa-check"></i><b>5.1</b> Chap. VIII: Linking process-based models to data: the statistical interface</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="part-3-linking-process-based-models-to-data---the-statistical-interface.html"><a href="part-3-linking-process-based-models-to-data---the-statistical-interface.html#how-to-confront-models-and-data-from-qualitative-to-quantitative-overview-of-existing-lit"><i class="fa fa-check"></i><b>5.1.1</b> How to confront models and data: from qualitative to quantitative (overview of existing lit)</a></li>
+<li class="chapter" data-level="5.1.2" data-path="part-3-linking-process-based-models-to-data---the-statistical-interface.html"><a href="part-3-linking-process-based-models-to-data---the-statistical-interface.html#models-on-sampling-uncertainty-sources-of-variability-types-of-error-non-observed-states-etc"><i class="fa fa-check"></i><b>5.1.2</b> Models on sampling uncertainty, sources of variability (types of error, non-observed states etc?)</a></li>
+<li class="chapter" data-level="5.1.3" data-path="part-3-linking-process-based-models-to-data---the-statistical-interface.html"><a href="part-3-linking-process-based-models-to-data---the-statistical-interface.html#learning-and-validation"><i class="fa fa-check"></i><b>5.1.3</b> Learning and validation</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="part-3-linking-process-based-models-to-data---the-statistical-interface.html"><a href="part-3-linking-process-based-models-to-data---the-statistical-interface.html#chap.-xi-model-fitting"><i class="fa fa-check"></i><b>5.2</b> Chap. XI: Model fitting</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="part-3-linking-process-based-models-to-data---the-statistical-interface.html"><a href="part-3-linking-process-based-models-to-data---the-statistical-interface.html#distances-between-model-predictions-and-data-least-square"><i class="fa fa-check"></i><b>5.2.1</b> Distances between model predictions and data (least square…)</a></li>
+<li class="chapter" data-level="5.2.2" data-path="part-3-linking-process-based-models-to-data---the-statistical-interface.html"><a href="part-3-linking-process-based-models-to-data---the-statistical-interface.html#likelihood"><i class="fa fa-check"></i><b>5.2.2</b> Likelihood</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="part-3-linking-process-based-models-to-data---the-statistical-interface.html"><a href="part-3-linking-process-based-models-to-data---the-statistical-interface.html#chap.-x-model-selection"><i class="fa fa-check"></i><b>5.3</b> Chap. X: Model selection</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="part-3-linking-process-based-models-to-data---the-statistical-interface.html"><a href="part-3-linking-process-based-models-to-data---the-statistical-interface.html#model-selection-and-information-criteria-model-averagingburnham-anderson-stuff"><i class="fa fa-check"></i><b>5.3.1</b> Model selection and Information criteria, model averaging/Burnham-Anderson stuff</a></li>
+<li class="chapter" data-level="5.3.2" data-path="part-3-linking-process-based-models-to-data---the-statistical-interface.html"><a href="part-3-linking-process-based-models-to-data---the-statistical-interface.html#penalised-regression-lasso-ridge-etc."><i class="fa fa-check"></i><b>5.3.2</b> Penalised regression (lasso, ridge, etc.)</a></li>
+<li class="chapter" data-level="5.3.3" data-path="part-3-linking-process-based-models-to-data---the-statistical-interface.html"><a href="part-3-linking-process-based-models-to-data---the-statistical-interface.html#machine-learning-approaches-random-forest-neural-networks"><i class="fa fa-check"></i><b>5.3.3</b> Machine learning approaches (random forest, neural networks, …)</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Theory-driven analysis of ecological data: a practical handbook</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="part-2-mathematical-or-process-based-modeling" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">Chapter 4</span> Part 2: Mathematical (or “process-based”?) modeling (???)<a href="part-2-mathematical-or-process-based-modeling.html#part-2-mathematical-or-process-based-modeling" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Intro pour expliquer la logique de l’agencement des chapitres</p>
+<div id="chap-ii-finite-numbers-of-individuals-stochastic-models" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Chap II: Finite numbers of individuals (stochastic models)<a href="part-2-mathematical-or-process-based-modeling.html#chap-ii-finite-numbers-of-individuals-stochastic-models" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="ii.0.-stochastic-individual-based-simulations" class="section level3 hasAnchor" number="4.1.1">
+<h3><span class="header-section-number">4.1.1</span> II.0. Stochastic individual-based simulations<a href="part-2-mathematical-or-process-based-modeling.html#ii.0.-stochastic-individual-based-simulations" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="ii.1.-primer-on-probabilities-random-variables-discrete-and-continuous-distributions-pgf-and-mgf-central-limit-theorem" class="section level3 hasAnchor" number="4.1.2">
+<h3><span class="header-section-number">4.1.2</span> II.1. Primer on probabilities (random variables, discrete and continuous distributions, PGF and MGF, central limit theorem)<a href="part-2-mathematical-or-process-based-modeling.html#ii.1.-primer-on-probabilities-random-variables-discrete-and-continuous-distributions-pgf-and-mgf-central-limit-theorem" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="ii.2.-small-populations-and-branching-processes" class="section level3 hasAnchor" number="4.1.3">
+<h3><span class="header-section-number">4.1.3</span> II.2. Small populations and branching processes<a href="part-2-mathematical-or-process-based-modeling.html#ii.2.-small-populations-and-branching-processes" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="ii.3.-markov-chains-ergodicity-absorbing-states" class="section level3 hasAnchor" number="4.1.4">
+<h3><span class="header-section-number">4.1.4</span> II.3. Markov chains (ergodicity, absorbing states)<a href="part-2-mathematical-or-process-based-modeling.html#ii.3.-markov-chains-ergodicity-absorbing-states" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="ii.4.-master-equations-moment-closure" class="section level3 hasAnchor" number="4.1.5">
+<h3><span class="header-section-number">4.1.5</span> II.4. Master equations, moment closure?<a href="part-2-mathematical-or-process-based-modeling.html#ii.4.-master-equations-moment-closure" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="ii.5.-pdes-diffusion" class="section level3 hasAnchor" number="4.1.6">
+<h3><span class="header-section-number">4.1.6</span> II.5. PDEs, diffusion<a href="part-2-mathematical-or-process-based-modeling.html#ii.5.-pdes-diffusion" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="boxes-algo-gillespie-refinements-generating-random-numbers-according-to-defined-distributions" class="section level3 hasAnchor" number="4.1.7">
+<h3><span class="header-section-number">4.1.7</span> Boxes: algo Gillespie + refinements ; generating random numbers according to defined distributions<a href="part-2-mathematical-or-process-based-modeling.html#boxes-algo-gillespie-refinements-generating-random-numbers-according-to-defined-distributions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+
+</div>
+</div>
+<div id="chap-iii-large-numbers-dynamical-systems-and-ways-to-analyse-them" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Chap III: Large numbers (dynamical systems; and ways to analyse them)<a href="part-2-mathematical-or-process-based-modeling.html#chap-iii-large-numbers-dynamical-systems-and-ways-to-analyse-them" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="iii.1.-primer-on-analysis-derivatives-attractors-stability-permanence-jacobian-changes-of-variables-analytical-approximations-taylor-series-delta-method" class="section level3 hasAnchor" number="4.2.1">
+<h3><span class="header-section-number">4.2.1</span> III.1. Primer on analysis (derivatives, attractors, stability, permanence, jacobian, changes of variables… + analytical approximations: Taylor series, delta method)<a href="part-2-mathematical-or-process-based-modeling.html#iii.1.-primer-on-analysis-derivatives-attractors-stability-permanence-jacobian-changes-of-variables-analytical-approximations-taylor-series-delta-method" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="iii.2.-difference-equations-ex-fibonacci" class="section level3 hasAnchor" number="4.2.2">
+<h3><span class="header-section-number">4.2.2</span> III.2. Difference equations (ex: fibonacci)<a href="part-2-mathematical-or-process-based-modeling.html#iii.2.-difference-equations-ex-fibonacci" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="iii.3.-odes-example-malthus-and-logistic" class="section level3 hasAnchor" number="4.2.3">
+<h3><span class="header-section-number">4.2.3</span> III.3. ODEs (example: malthus and logistic)<a href="part-2-mathematical-or-process-based-modeling.html#iii.3.-odes-example-malthus-and-logistic" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="iii.4.-stage-structured-physiologically-structured-compartment-models-r0-euler-lotka-reproductive-values-eigenvalue-based-growth-rate" class="section level3 hasAnchor" number="4.2.4">
+<h3><span class="header-section-number">4.2.4</span> III.4. Stage-structured / physiologically structured / compartment models (R0, Euler-Lotka, reproductive values, eigenvalue-based growth rate…)<a href="part-2-mathematical-or-process-based-modeling.html#iii.4.-stage-structured-physiologically-structured-compartment-models-r0-euler-lotka-reproductive-values-eigenvalue-based-growth-rate" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="boxes-integration-schemes-euler-et-al." class="section level3 hasAnchor" number="4.2.5">
+<h3><span class="header-section-number">4.2.5</span> Boxes: integration schemes (Euler et al.)<a href="part-2-mathematical-or-process-based-modeling.html#boxes-integration-schemes-euler-et-al." class="anchor-section" aria-label="Anchor link to header"></a></h3>
+
+</div>
+</div>
+<div id="reintroducing-stochasticity-dynamical-systems-with-noise" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Reintroducing stochasticity (dynamical systems with noise)<a href="part-2-mathematical-or-process-based-modeling.html#reintroducing-stochasticity-dynamical-systems-with-noise" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="environmental-stochasticity-demographic-stochasticity" class="section level3 hasAnchor" number="4.3.1">
+<h3><span class="header-section-number">4.3.1</span> Environmental stochasticity / demographic stochasticity<a href="part-2-mathematical-or-process-based-modeling.html#environmental-stochasticity-demographic-stochasticity" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="section" class="section level3 hasAnchor" number="4.3.2">
+<h3><span class="header-section-number">4.3.2</span> ?<a href="part-2-mathematical-or-process-based-modeling.html#section" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+
+</div>
+</div>
+<div id="chap-v-spatial-structure" class="section level2 hasAnchor" number="4.4">
+<h2><span class="header-section-number">4.4</span> Chap V: spatial structure<a href="part-2-mathematical-or-process-based-modeling.html#chap-v-spatial-structure" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="v.1.-implicit-space-and-patches" class="section level3 hasAnchor" number="4.4.1">
+<h3><span class="header-section-number">4.4.1</span> V.1. Implicit space and patches<a href="part-2-mathematical-or-process-based-modeling.html#v.1.-implicit-space-and-patches" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="v.2.-explicit-discrete-space-networks-and-lattices" class="section level3 hasAnchor" number="4.4.2">
+<h3><span class="header-section-number">4.4.2</span> V.2. Explicit discrete space (networks and lattices)<a href="part-2-mathematical-or-process-based-modeling.html#v.2.-explicit-discrete-space-networks-and-lattices" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="v.3.-explicit-continuous-spaces-pdes" class="section level3 hasAnchor" number="4.4.3">
+<h3><span class="header-section-number">4.4.3</span> V.3. Explicit continuous spaces (PDEs)<a href="part-2-mathematical-or-process-based-modeling.html#v.3.-explicit-continuous-spaces-pdes" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="v.4.-models-of-dispersal-and-foraging-kernels-brownian-motion-lévy-walk-optimal-foraging" class="section level3 hasAnchor" number="4.4.4">
+<h3><span class="header-section-number">4.4.4</span> V.4. Models of dispersal and foraging (kernels, brownian motion, Lévy walk, optimal foraging…)<a href="part-2-mathematical-or-process-based-modeling.html#v.4.-models-of-dispersal-and-foraging-kernels-brownian-motion-lévy-walk-optimal-foraging" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+
+</div>
+</div>
+<div id="chap-vi-interactions" class="section level2 hasAnchor" number="4.5">
+<h2><span class="header-section-number">4.5</span> Chap VI: interactions<a href="part-2-mathematical-or-process-based-modeling.html#chap-vi-interactions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="vi.1.-types-of-interactions-and-functional-responses-in-continuous-and-discrete-time" class="section level3 hasAnchor" number="4.5.1">
+<h3><span class="header-section-number">4.5.1</span> VI.1. Types of interactions and functional responses (in continuous and discrete time)<a href="part-2-mathematical-or-process-based-modeling.html#vi.1.-types-of-interactions-and-functional-responses-in-continuous-and-discrete-time" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Chemical kinetics to invent functional responses</p>
+</div>
+<div id="vi.2.-lotka-volterra" class="section level3 hasAnchor" number="4.5.2">
+<h3><span class="header-section-number">4.5.2</span> VI.2. Lotka-Volterra<a href="part-2-mathematical-or-process-based-modeling.html#vi.2.-lotka-volterra" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="vi.3.-food-web-models-niche-cascade" class="section level3 hasAnchor" number="4.5.3">
+<h3><span class="header-section-number">4.5.3</span> VI.3. Food-web models (niche, cascade, …)<a href="part-2-mathematical-or-process-based-modeling.html#vi.3.-food-web-models-niche-cascade" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="vi.4.-network-analysis-primer" class="section level3 hasAnchor" number="4.5.4">
+<h3><span class="header-section-number">4.5.4</span> VI.4. Network analysis (primer)<a href="part-2-mathematical-or-process-based-modeling.html#vi.4.-network-analysis-primer" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="vi.5.-random-matrices" class="section level3 hasAnchor" number="4.5.5">
+<h3><span class="header-section-number">4.5.5</span> VI.5. Random matrices<a href="part-2-mathematical-or-process-based-modeling.html#vi.5.-random-matrices" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+
+</div>
+</div>
+<div id="chap.-vii-links-between-ecology-and-evolution" class="section level2 hasAnchor" number="4.6">
+<h2><span class="header-section-number">4.6</span> Chap. VII: Links between ecology and evolution<a href="part-2-mathematical-or-process-based-modeling.html#chap.-vii-links-between-ecology-and-evolution" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="vii.1.-historical-overview-incl.-common-processes-cf-vellend-etc-globally-cf.-for-example-huneman-2019-and-maybe-ele-special-issue-2023" class="section level3 hasAnchor" number="4.6.1">
+<h3><span class="header-section-number">4.6.1</span> VII.1. Historical overview (incl. common processes cf Vellend etc; globally cf. for example Huneman 2019; and maybe ELE special issue 2023)<a href="part-2-mathematical-or-process-based-modeling.html#vii.1.-historical-overview-incl.-common-processes-cf-vellend-etc-globally-cf.-for-example-huneman-2019-and-maybe-ele-special-issue-2023" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="vii.2.-timescales" class="section level3 hasAnchor" number="4.6.2">
+<h3><span class="header-section-number">4.6.2</span> VII.2. Timescales<a href="part-2-mathematical-or-process-based-modeling.html#vii.2.-timescales" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="vii.3.-frameworks-ad-qg-oligomorphic-dynamics-ibms" class="section level3 hasAnchor" number="4.6.3">
+<h3><span class="header-section-number">4.6.3</span> VII.3. Frameworks (AD, QG, oligomorphic dynamics, IBMs)<a href="part-2-mathematical-or-process-based-modeling.html#vii.3.-frameworks-ad-qg-oligomorphic-dynamics-ibms" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="part-1-background-more-fancy-title-needed.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="part-3-linking-process-based-models-to-data---the-statistical-interface.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/03-finite-nb.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

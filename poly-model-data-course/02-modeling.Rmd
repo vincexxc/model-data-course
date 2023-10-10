@@ -1,0 +1,22 @@
+# Background (more fancy title needed)
+
+## Modelling in ecology
+	
+### A quick history
+	
+### Specificities of ecology
+	
+Variability + time*space + local interactions + observations through both experiments and field studies + open systems
+Formalisation,simplifications often used in ecology, assumptions, …
+
+### Ecological data, uncertainties, sampling
+	
+At different organisational scales: individual, population, community, ecosystem and all meta-
+
+### Mathematical modelling / computational approaches (lots to discuss here from Game of life type stuff/von Neumann to IBMs/ABMs note: Grimm is not universally representative ;-) ) ? 	
+
+### Appendices: Primer on vectors and matrices (multidimensional data)
+
+### Appendices: Primer on analysis, dérivées, Taylor series, minimum/maximum…   
+
+### Appendices: Removing dimensions, dimensional analysis
