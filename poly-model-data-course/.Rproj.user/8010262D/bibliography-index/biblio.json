@@ -60,7 +60,7 @@
                     ]
                 ]
             },
-            "note": "R package version 0.35",
+            "note": "R package version 0.37, https://pkgs.rstudio.com/bookdown/",
             "title": "Bookdown: Authoring books and technical documents with r markdown",
             "title-short": "Bookdown",
             "type": "book"
@@ -81,7 +81,7 @@
                     ]
                 ]
             },
-            "note": "R package version 1.44",
+            "note": "R package version 1.45",
             "title": "Knitr: A general-purpose package for dynamic report generation in r",
             "title-short": "Knitr",
             "type": "book"
@@ -142,7 +142,7 @@
                     ]
                 ]
             },
-            "note": "R package version 2.25",
+            "note": "R package version 2.25, https://pkgs.rstudio.com/rmarkdown/",
             "title": "Rmarkdown: Dynamic documents for r",
             "title-short": "Rmarkdown",
             "type": "book"
