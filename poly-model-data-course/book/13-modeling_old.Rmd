@@ -1,4 +1,4 @@
-# Why mathematical models? (old title: Background)
+# Why mathematical models? 
 
 ## The scientific method
 
@@ -6,31 +6,31 @@ Why do we need *models* in ecology? Before answering that question, let's first 
 
 Science (through the scientific method) can build on previous knowledge and develop a more sophisticated understanding of its topics of study over time.
 
--	'Problem' identification: It involves careful observation which leads to the formulation of a question.
+-	**'Problem' identification**: It involves careful observation which leads to the formulation of a question.
 
--	Hypothesis: A hypothesis is a conjecture (hypothetical explanations), based on the observation/the knowledge obtained while formulating the question, that may explain any given behavior. A scientific hypothesis must be falsifiable, implying that it is possible to identify a possible outcome of an experiment or observation that conflicts with predictions deduced from the hypothesis; otherwise, the hypothesis cannot be meaningfully tested. 
+-	**Hypothesis**: A hypothesis is a conjecture (hypothetical explanations), based on the observation/the knowledge obtained while formulating the question, that may explain any given behavior. A scientific hypothesis must be falsifiable, implying that it is possible to identify a possible outcome of an experiment or observation that conflicts with predictions deduced from the hypothesis; otherwise, the hypothesis cannot be meaningfully tested. 
 Falsifiability is a deductive standard of evaluation of scientific theories and hypotheses, introduced by the philosopher of science Karl Popper in his book The Logic of Scientific Discovery (1934). 
 A theory or hypothesis is falsifiable (or refutable) if it can be logically contradicted by an empirical test.
 
--	Prediction: The prediction step deduces the logical consequences of the hypothesis before the outcome is known. 
+-	**Prediction**: The prediction step deduces the logical consequences of the hypothesis before the outcome is known. 
 
--	Testing: Hypotheses are tested by conducting experiments or gathering observations. The purpose of the test is to determine whether observations agree with or conflict with the expectations deduced from a hypothesis. 
+-	**Testing**: Hypotheses are tested by conducting experiments or gathering observations. The purpose of the test is to determine whether observations agree with or conflict with the expectations deduced from a hypothesis. 
 
--	Refinement (or elimination) of the hypotheses based on the experimental findings. 
+-	**Refinement (or elimination) of the hypotheses** based on the experimental findings. 
 
 Although procedures vary from one field of inquiry to another, the underlying process is frequently the same. In sum, the process is as follows: making conjectures (hypotheses), deriving predictions from them as logical consequences, and then carrying out experiments based on those predictions to determine whether the original conjecture was correct. 
 
-The scientific method is an iterative, cyclical process through which information is continually revised
+**The scientific method is an iterative, cyclical process through which information is continually revised.**
 
 ## A feedback loop involving data and models
 
 A scientific understanding of the biological world arises when ideas about how nature works are formalized, tested, refined, and then tested again.
 
-Scientific inquiry should operate as a feedback loop in which theory that describes the natural world is developed, tested empirically through carefully articulated hypotheses, modified to better represent reality, and then tested again. 
+**Scientific inquiry should operate as a feedback loop** in which theory that describes the natural world is developed, tested empirically through carefully articulated hypotheses, modified to better represent reality, and then tested again. 
 
-When this feedback loop works, theory provides a framework to guide inquiry, experimental design, and the interpretation of observed patterns, supplies mathematical tools to harness information from collected data, and connects individual experiments to general ideas about how nature operates.
+When this feedback loop works, **theory** provides a framework to guide inquiry, experimental design, and the interpretation of observed patterns, supplies mathematical tools to harness information from collected data, and connects individual experiments to general ideas about how nature operates.
 
-In turn, empirical research can be used to support, refute, or revise theoretical predictions, indicate which theoretical assumptions are consistent with the natural world, and point theoreticians to overlooked processes that can be integrated into models.
+In turn, **empirical research** can be used to support, refute, or revise theoretical predictions, indicate which theoretical assumptions are consistent with the natural world, and point theoreticians to overlooked processes that can be integrated into models.
 
 **However, there is currently a disconnection between theoretical and empirical research.**
 
@@ -63,73 +63,71 @@ We define *ecological theory* broadly as an explanation of an ecological phenome
 Maris et al. 2017: "Scientific theories contain universal or general propositions regarding the system in question; they generally encompass a set of models, or rules to build models, as representations of the properties and dynamics of target systems. Models can then be expressed as hypotheses within a formal framework (van Fraassen 1980, Giere 2004)."
 
 The transformation of an idea in narrative form into a logical, testable theory often, though not always, involves the use of *models* (Otto and Rosales 2020). 
+
 ### What’s a model? 
 
-https://en.wikipedia.org/wiki/Ecosystem_model
-If I say the word “model” what comes to your mind (everything, even not related to science)? (write on board) Models (Claudia Schiffer), miniatures, maps, mathematical models…. What are the common elements? 
+<https://en.wikipedia.org/wiki/Ecosystem_model>
+
+`If I say the word “model” what comes to your mind (everything, even not related to science)?
+(write on board)` 
+
+Models (Claudia Schiffer), miniatures, maps, mathematical models…. 
+
+`What are the common elements?`
 
 The concept of a model is derived from scale models, referring to simplified replicas of larger structures such as, for instance, buildings or ships. This implies a structural similarity between a model and its original. 
-Thus, models are simplified representations of certain aspects of our study systems. 
+Thus, **models are  idealized representations of certain aspects of our study systems. They are idealized versions of reality**, just as architectural models represent key features of complex structures and model organisms represent a group of organisms that share common attributes (Kokko 2007). 
 
-Models are idealized and simplified versions of reality, just as architectural models represent key features of complex structures and model organisms represent a group of organisms that share common attributes (Kokko 2007). 
+- Models can be as simple as a verbal statement about a subject or two boxes connected by an arrow to represent some relationship. Alternatively, models can be extremely complex and detailed, such as a mathematical description of the pathways of nitrogen transformations within ecosystems.
 
-Models can be as simple as a verbal statement about a subject or two boxes connected by an arrow to represent some relationship. Alternatively, models can be extremely complex and detailed, such as a mathematical description of the pathways of nitrogen transformations within ecosystems.
+- Models can be conceptual (e.g. diagram of boxes and arrows; boxes = state variables, arrows = relationships) or quantitative. 
 
-Models can be conceptual (e.g. diagram of boxes and arrows; boxes = state variables, arrows = relationships) or quantitative. 
-
-A mathematical model is an equation or a set of equations that describes how different aspects of a system relate to one another (Otto and Day 2007). (a set of mathematical expressions)
-
+- A mathematical model can be an equation or a set of equations (mathematical expressions) that describes how different aspects of a system relate to one another (Otto and Day 2007). 
 They can be phenomenological or mechanistic (Grainger et al. 2022). 
 
 Theory and math are not inexorably linked. Indeed, many excellent theories do not involve math (e.g., the theory of evolution by natural selection; Darwin 1859), and many uses of math in ecology are not theory (e.g., practical applications of statistics).
 
-intro Kokko’s book
-models are an idealized, simplified version of the real world; e.g. maps
-Therefore they are not real. They’re incomplete, they’re wrong. 
-“all models are false but some models are useful”
-https://en.wikipedia.org/wiki/All_models_are_wrong
+Because models are an idealized, simplified version of the real world (e.g. maps), they are therefore not real. They’re incomplete, they’re wrong (intro Kokko’s book). 
+**“all models are false but some models are useful”**
+<https://en.wikipedia.org/wiki/All_models_are_wrong>
 
 The systems we’re interested in are complex. How can we hope capturing the complexity of reality? We can’t. 
-And if we did it would not be helpful (if models are as complex as reality). 
-e.g. map
-- too many parameters to measure (would require too much time and resources)
-- the equations are insoluble and require too long to run on even a good computer
-- even if soluble, we might not be able to understand the results
+And if we did, it would not be helpful (if models are as complex as reality, e.g. map) because of: 
 
-Modeling involves a choice what to include and what to leave out.
-We need to simplify systems in a way that preserves the essential features of the system (depending on our interest).  this means that our big task as modelers is to decide what goes in the model and what doesn’t. The art of modeling is to decide which aspect of reality one can sacrifice and which ones are crucial to retain. 
+- too many parameters to measure (would require too much time and resources),
+- the equations are insoluble and require too long to run on even a good computer,
+- even if soluble, we might not be able to understand the results. 
+
+**Modeling involves a choice about what to include and what to leave out.**
+We need to simplify systems in a way that preserves the essential features of the system (depending on our interest). This means that our big task as modelers is to decide what goes in the model and what doesn’t. The art of modeling is to decide which aspect of reality one can sacrifice and which ones are crucial to retain. 
 
 The tension between realism, generality, and precision:
-Levins 1966
-https://v4.chriskrycho.com/2016/realism-generality-and-precision-in-tension.html
+**Levins 1966**
+<https://v4.chriskrycho.com/2016/realism-generality-and-precision-in-tension.html>
 
 We want to work with manageable models which max generality, realism and precision towards the goals of understanding and predicting…. But this cannot be done. 
 
-One can sacrifice generality to realism and precision. E.g. fisheries; good measurement of shot-time behavior, numerical solution  precise testable predictions applicable to a particular situation).
+- One can sacrifice generality to realism and precision. E.g. fisheries; good measurement of shot-time behavior, numerical solution, precise testable predictions applicable to a particular situation).
 
-One can sacrifice realism to generality and precision. E.g. physics-like models (general equations such as LV) -> the way in which nature deviates from theory will indicate where further complexity will be useful. 
+- One can sacrifice realism to generality and precision. E.g. physics-like models (general equations such as LV) -> the way in which nature deviates from theory will indicate where further complexity will be useful. 
 
-One can sacrifice precision to realism and generality. E.g. MacArthur 1965. People concerned with the qualitative behavior (not quantitative). Graphical models. 
+- One can sacrifice precision to realism and generality. E.g. MacArthur 1965. People concerned with the qualitative behavior (not quantitative). Graphical models. 
 
 Note that the choice made on what to sacrifice might depend on the stage of a research program: 
-At the conceptual stage of research models are used to further develop
-theory. Models allow to do thoughts experiments. ‘All else being equal’ what
-is the effect of a certain factor or process? Conceptual models are thinking aids rather than investigations of real phenomena. 
-At the other extreme lies the practical stage, where models are used to closely
-examine real-life phenomena. At the practical stage models are used for purposes such as inference from empirical data, making quantitative predictions concerning future system dynamics, or effects of studied factors, and guiding management decisions. These models comprise ‘statistical’ models, ‘computer models’, etc. Their aim is to make accurate statements about the studied system given the circumstances in the real world.
+At the conceptual stage of research **models are used to further develop theory**. Models allow to do thoughts experiments. ‘All else being equal’ what is the effect of a certain factor or process? Conceptual models are thinking aids rather than investigations of real phenomena. 
+At the other extreme lies the practical stage, where models are used to closely examine real-life phenomena. At the practical stage models are used for **purposes such as inference** from empirical data, making quantitative predictions concerning future system dynamics, or effects of studied factors, and guiding management decisions. These models comprise ‘statistical’ models, ‘computer models’, etc. Their aim is to make accurate statements about the studied system given the circumstances in the real world.
 
 ### Why modeling? Model – theory
 
-Models do not investigate nature. Instead, they investigate the validity of our own thinking. Models are ‘thinking aids’. They exist because we need them to help us explore things: none of us was born with a supercomputer. P. 8 Kokko. The most important function of models is to order our thoughts. With models we formulate what we (think we) know about the world, and we may use them to perform thought experiments through 'what if' scenarios. Modèle = experimentation pour poser des questions. 
- models allow to explore ideas that might not be doable experimentally or for financial reasons.
+Models do not investigate nature. Instead, they investigate the validity of our own thinking. **Models are ‘thinking aids’**. They exist because we need them to help us explore things: none of us was born with a supercomputer (P. 8 Kokko). The most important function of models is to order our thoughts. With models, we formulate what we (think we) know about the world, and we may use them to perform thought experiments through 'what if' scenarios. Modèle = experimentation pour poser des questions. In sum, models allow to explore ideas that might not be doable experimentally or for financial reasons.
 
-Another important use of models is to function as an idealization of the world. Models
-force us to make a choice concerning which aspects of 'the real world' we include into
-our description and which we choose to ignore (for the moment). This is true for verbal
-as well as mathematical models. Mathematical formulations reveal implicit
-assumptions and thus force us to be explicit. The translation of ideas in a theoretician’ s mind into math on a page serves several purposes: 
+Another important use of models is to function as **an idealization of the world**. Models force us to make a choice concerning which aspects of 'the real world' we include into our description, and which ones we choose to ignore (for the moment). This is true for verbal
+as well as mathematical models. Mathematical formulations reveal implicit assumptions and thus force us to be explicit. The translation of ideas in a theoretician’ s mind into math on a page serves several purposes: 
+
 -	math provides a clearer and more objective expression of relationships, 
+
 -	it brings to light assumptions and logical errors that may be obscured in verbal hypotheses, 
+
 -	and it places ideas and hypotheses into a concrete and concise form (Grimm 1994; Kokko 2007; Marquet et al. 2014; Otto and Rosales 2020).
  
 Primer of eco with R p. 5:

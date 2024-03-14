@@ -1,0 +1,149 @@
+# Why mathematical models? (Sonia)
+
+## Big data
+
+According to IBM, every day humanity generates 2.5 trillion (2.5 billion billion) bytes of text, image and sound data (<https://www-01.ibm.com/software/fr/data/bigdata>). Acceleration of information accumulation. We can learn from massive amount of data available.
+
+When read by machines (analyses, they can reveal a wealth of unsuspected correlations (or that are difficult to identify). Success of Amazon or Netflix at learning what you like from studying your habits. 
+
+Machine learning (ML), a subset of AI that enables computers to learn from training data, has been highly effective at predicting various types of cancer, including breast, brain, lung, liver, and prostate cancer. In fact, AI and ML have demonstrated greater accuracy in predicting cancer than clinicians.
+
+So, knowledge can emerge from this data analysis (even without any idea of the underlying laws). 
+
+This lead some people to suggest that we may not need theory anymore ("The end of theory: the data deluge, Wired). The availability of data and the development of methods to analyse them: does they mean that we're going through a major epistemological change? In other terms: do we still need models and theory?
+
+<https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2711825/>
+
+##	What is theory? 
+
+We define *ecological theory* broadly as an explanation of an ecological phenomenon. These explanations take the form of narratives that explain how an ecological process works, or why an ecological pattern is observed, and that becomes scientifically useful when expressed in a logical structure (Pickett et al. 2010; Rossberg et al. 2019). 
+
+Maris et al. 2017: "Scientific theories contain universal or general propositions regarding the system in question; they generally encompass a set of models, or rules to build models, as representations of the properties and dynamics of target systems. Models can then be expressed as hypotheses within a formal framework (van Fraassen 1980, Giere 2004)."
+
+The transformation of an idea in narrative form into a logical, testable theory often, though not always, involves the use of *models* (Otto and Rosales 2020). 
+
+## What’s a model? 
+
+<https://en.wikipedia.org/wiki/Ecosystem_model>
+
+The concept of a model is derived from scale models, referring to simplified replicas of larger structures such as, for instance, buildings or ships. This implies a structural similarity between a model and its original. Thus, **models are idealized representations of certain aspects of our study systems. They are idealized versions of reality**, just as architectural models represent key features of complex structures and model organisms represent a group of organisms that share common attributes (Kokko 2007). 
+
+Models can be as simple as a verbal statement about a subject or two boxes connected by an arrow to represent some relationship (conceptual models). Alternatively, models can be extremely complex and detailed, such as a mathematical description of the pathways of nitrogen transformations within ecosystems.
+
+A mathematical model can be an equation or a set of equations (mathematical expressions) that describes how different aspects of a system relate to one another (Otto and Day 2007). They can be phenomenological or mechanistic (Grainger et al. 2022). 
+
+Theory and math are not inexorably linked. Indeed, many excellent theories do not involve math (e.g., the theory of evolution by natural selection; Darwin 1859), and many uses of math in ecology are not theory (e.g., practical applications of statistics).
+
+Because models are an idealized, simplified version of the real world (e.g. maps), they are therefore not real. They’re incomplete, they’re wrong (intro Kokko’s book). 
+**“all models are false but some models are useful”**
+<https://en.wikipedia.org/wiki/All_models_are_wrong>
+
+The systems we’re interested in are complex. How can we hope capturing the complexity of reality? We can’t. 
+And if we did, it would not be helpful (if models are as complex as reality, e.g. map) because of: 
+
+- too many parameters to measure (would require too much time and resources),
+- the equations are insoluble and require too long to run on even a good computer,
+- even if soluble, we might not be able to understand the results. 
+
+**Modeling involves a choice about what to include and what to leave out.**
+We need to simplify systems in a way that preserves the essential features of the system (depending on our interest). This means that our big task as modelers is to decide what goes in the model and what doesn’t. The art of modeling is to decide which aspect of reality one can sacrifice and which ones are crucial to retain. 
+
+We want to work with manageable models which max generality, realism and precision towards the goals of understanding and predicting…. 
+
+These goals typically compete with each other so real models are mathematical descriptions that result from tradeoffs among these goals which depend on our needs: the tension between realism, generality, and precision:
+**Levins 1966**
+<https://v4.chriskrycho.com/2016/realism-generality-and-precision-in-tension.html>
+
+- One can sacrifice generality to realism and precision. E.g. fisheries; good measurement of shot-time behavior, numerical solution, precise testable predictions applicable to a particular situation).
+
+- One can sacrifice realism to generality and precision. E.g. physics-like models (general equations such as LV). The way in which nature deviates from theory will indicate where further complexity will be useful. 
+
+- One can sacrifice precision to realism and generality. E.g. MacArthur 1965. People concerned with the qualitative behavior (not quantitative). Graphical models. 
+
+
+## Purpose of science?
+
+Understand and predict. 
+
+
+## Can we do that with big data (data analysis?)
+
+Big data analysis reveals correlations. (Again, this can be useful)
+But those correlations are not causal. 
+Famous examples of spurious correlations.
+Correlations can emerge by chance because you look at some many variables. 
+Correlations can happen because of confounding factors, e.g. the example of shoe size and level of math in a school (due to age)
+
+So we can find correlations, but we often don't know why. So we can't understand (understanding is finding associations that are causal). 
+
+This does not mean that non-causal correlations can't help predict! They can have great predictive power. Amazon, Netflix. 
+So we can learn from those data and their analysis, even without causal knowledge. 
+
+We can predict, but we can also fail at predicting. Predictions can fail because lacks of general rules, so extrapolations can fail; financial crisis, elections. It relies on what happened in the past, so unable to work in new situations. 
+
+Predict without understanding.... act without understanding? Risks (cf justice, police, discriminations)
+
+Big data don't create theory, they need it to be exploited. (This last statement could evolve in the future? In particular, new analyses methods suggest they can successfully retrive causality from correlations; cg Zach, Stan's paper with Correlation Cross mapping). 
+
+Because of that, we can argue that we still do need theory and models! (models are one langage of theory, one way of expressing it)
+
+## The scientific method
+
+Let's step back and reflect on the process by which science is carried out. The *scientific method* is an empirical method for acquiring knowledge that has characterized the development of science since at least the 17th century.
+
+Science (through the scientific method) can build on previous knowledge and develop a more sophisticated understanding of its topics of study over time.
+
+-	**'Problem' identification**: It involves careful observation which leads to the formulation of a question.
+
+-	**Hypothesis**: A hypothesis is a conjecture (hypothetical explanations), based on the observation/the knowledge obtained while formulating the question, that may explain any given behavior. A scientific hypothesis must be falsifiable, implying that it is possible to identify a possible outcome of an experiment or observation that conflicts with predictions deduced from the hypothesis; otherwise, the hypothesis cannot be meaningfully tested. 
+Falsifiability is a deductive standard of evaluation of scientific theories and hypotheses, introduced by the philosopher of science Karl Popper in his book The Logic of Scientific Discovery (1934). 
+A theory or hypothesis is falsifiable (or refutable) if it can be logically contradicted by an empirical test.
+
+-	**Prediction**: The prediction step deduces the logical consequences of the hypothesis before the outcome is known. 
+
+-	**Testing**: Hypotheses are tested by conducting experiments or gathering observations. The purpose of the test is to determine whether observations agree with or conflict with the expectations deduced from a hypothesis. 
+
+-	**Refinement (or elimination) of the hypotheses** based on the experimental findings. 
+
+Although procedures vary from one field of inquiry to another, the underlying process is frequently the same. In sum, the process is as follows: making conjectures (hypotheses), deriving predictions from them as logical consequences, and then carrying out experiments based on those predictions to determine whether the original conjecture was correct. 
+
+**The scientific method is an iterative, cyclical process through which information is continually revised.**
+
+## A feedback loop involving data and models
+
+A scientific understanding of the biological world arises when ideas about how nature works are formalized, tested, refined, and then tested again.
+
+**Scientific inquiry should operate as a feedback loop** in which theory that describes the natural world is developed, tested empirically through carefully articulated hypotheses, modified to better represent reality, and then tested again. 
+
+When this feedback loop works, **theory** provides a framework to guide inquiry, experimental design, and the interpretation of observed patterns, supplies mathematical tools to harness information from collected data, and connects individual experiments to general ideas about how nature operates.
+
+In turn, **empirical research** can be used to support, refute, or revise theoretical predictions, indicate which theoretical assumptions are consistent with the natural world, and point theoreticians to overlooked processes that can be integrated into models.
+
+**However, there is currently a disconnection between theoretical and empirical research.**
+
+Although the benefits of feedback between theoretical and empirical research are widely acknowledged by ecologists, this link is still not as strong as it could be in ecological research. 
+
+Indeed, up to 45% of articles on empirical ecology make no mention of any theory whatsoever (Scheiner 2013), and fewer than 10% of ecologists and evolutionary biologists agree with the statement that 'theoretical findings drive empirical work' in their fields (Haller 2014).
+
+Further references about the disconnect between empirical and theoretical work in ecology: Lomnicki 1988; Kareiva 1989; Fawcett and Higginson 2012; Scheiner 2013; Haller 2014; Rossberg et al. 2019.
+
+**Why this disconnection?**
+
+- A lack of theoretical training in ecology (Rossberg et al. 2019). 
+- A lack of motivation on the part of some theoreticians to engage with the language of empiricists (Grimm 1994) or with the elements of nature that empiricists focus on (Krebs 1988).
+- A general lack of mutual appreciation between empiricists and theoreticians (Haller 2014). 
+- Persistent communication barriers between these two groups (Servedio 2020), in particular that theory is expressed in the langage of math (some ecologists may not have formal background in math and theoretical papers may not be written with a general audience, not always explaining asumptions, terminology and notations), some aspects of the theory may seem inaccessible by some, the more equations an ecology and evolutionary biology article contains, the fewer citations it receives (Fawcett and Higginson 2012).
+
+This barrier presents a major challenge to the full integration of theoretical and empirical work in ecology.
+
+**A better integration of theory into empirical work is needed** (Caswell 1988; Pickett et al. 2010; Marquet et al. 2014; Servedio et al. 2014; Servedio 2020).
+
+This is especially important in the context of global change. 
+
+This is why this course/book! 
+
+
+
+
+
+

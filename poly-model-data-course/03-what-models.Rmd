@@ -1,0 +1,144 @@
+# What types of theoretical models in ecology? (Isa)
+
+## What system? What question? What hypotheses (no maths shown here)
+
+* Question is related to a specific level of organization / scale and determine what can be ignored
+* Examples of questions for each scale based on our recurrent example plant-herbivore (P-H)
+* Updated Levin's triangle illustrated by different (P-H) with related questions => define variables
+* What can be ignored? Upper level is slower than lower ones and its dynamics may be ignored
+* Link between assumptions, model and predictions, with the risk of overinterpretation 
+* The different types of assumptions (critical, exploratory, logistical)
+* Illustration of assumption types  with the Grazing-optimisation example
+
+## What model formalism? (no maths shown here)
+
+### Deterministic – stochastic processes
+
+* What does stochasticity come from? Environmental, demographic, trait variability
+* When should we account for it (illustration with pop logistic growth (no math) with addition or not of gaussian noise)
+  - for questions related to output variability
+  - when output distribution is skewed and mean no more a good predictor (small pop)
+* When can we use deterministic: when processes can be summarised with averaged parameters
+* NB: mention of master equations (deterministic equation summarising stochastic model) 
+
+### Time: discrete – continuous 
+
+How do the processes are structured along time?  when using discrete vs continuous time 
+
+* Discrete-time: 
+  - Fixed generation times
+  - Synchronization of processes (e.g., seasonal forcing)
+  - Sequential processes with specific order (e.g., complex life-cycle) => more transparent 
+* Continuous time: 
+  - Events can happen at any time
+  - Generation overlap
+* Illustration with logistic pop growth in continuous and discrete time:
+  - discrete-time with small ∆t boils down to continuous
+  - discrete time have richer dynamics due to a lag
+* Both can be either stochastic or deterministic
+
+### Accounting for space 
+* None vs spatial: 
+  - TIB, example of space implicit; In none spatial models, space is assumed homogenous and the scale can be defined with the units (example: pop density in ind/km2)
+  - When does the question need it? Are spatial processes impacting local dynamics of interest or are we interested in patterns emerging at higher spatial scale from local processes? Implicit vs Explicit: does geographical positions  matter or only topology?
+* Topology versus Distances explicit
+  - Topology (metapop model): space is represented in the structure of space and strength of connectivity. Adapted to study fragmented landscapes or problems related to structure of connectivity
+  - Explicit: distances are explicit; in 1 (Fisher KPP) or two dimensions (grid): adapted to represents fronts, gradients, edge effects; or if interested with emerging spatial patterns
+* Discrete within the distance explicit case: grids vs Continuous (PDE):
+  - Continuous adapted to model processes occurring progressing locally (diffusion) but not processes with large distance / heterogeneous effects
+  - Grids with small mesh size can boil down to continuous (sometimes, discretisation is used for a technical approximation of continuous space)  => question of technical relevance.
+  - As continuous can be more difficult (math) this can prevent its use (mention of lab heritage)
+
+## What technical choices?
+
+### Analytical – Numerical
+
+* What do we gain in making models simple? => Principle of parcimony
+  - Analytical solution: we know the state of the model at any time point given
+  - Tractable model: We are able to express equilibrium with parameters and study local stability => we can say generalities about the long term dynamics
+  - Intractable models: we are obliged to do simulations using approximations (numerical algorithm or integration); the results depend on the parameter values and initial conditions.
+  - The dimension of the parameter space to explore is exponentially linked to the number of parameters
+  - Simulations allow to investigate transient dynamics
+
+### Rules versus Maths
+
+* What is an agent-based model? Algorithm which represent processes with a series of rules applied to each agent at each time step using proba: example with birth, death, interactions
+* What is the alternative: Math => equations: example of ODE, SDE, DE, PDE: what does it mean?
+  - ODE: change over time of our variable of interest (SDE; with some stochasticity)
+  - DE: State at the next time step
+  - PDE: Change over time and space
+* Advantages / Disadvantages:
+  - ABM: 
+    + The dynamics emerge from elemental processes
+    + Simpler to build from empirical knowledge
+    + But high computation consumption
+    + Rarely tractable
+  - Equations
+    + Use of math and approximation for simplifications
+    + Have large analysis power for extreme cases
+    + Fast computation
+    + Easier to fit to data 
+    + The relations between variables are imposed: processes synthetized
+* To what questions / system/ conditions is it most adapted?
+  - ABM: 
+    + When stochastic processes are dominant (ex: conservation of small pops) 
+    + When there are no too many parameters
+    + For some questions where processes are difficult to synthesise (behaviour)
+    + When there is no math skills around!
+  - Equations:
+    + Whenever processes can be synthesised with average parameters
+    + => Large populations
+
+## Some classical models used in ecology and seen next days 
+
+* Systems of differential equations, no space : 
+  - Verhulst (logistic growth), Lotka-Volterra predator-prey (Day 2)
+  - Lotka-Volterra, food web niche model (Day 4)
+* Spatial systems of differential equations: TIB, Levins’ occupancy (Day3)
+* Spatial IBM: Neutral model of biodiversity from Hubbel (Day 3)
+
+A Rmarkdown file will be available to provide the code of the illustrations of  section 2.2
+
+#  How to build a model? (Isa)
+(1h)  Lecture with interactivity  (and Rmarkdown file for some parts)
+
+* I will present different pictures of different plant-herbivore systems with associated research questions and ask how they will sketch the system (on board) to do a mode.
+* I will ask then which formalism they would choose and why (in terms of determinism, time, space) [and we can try writing rules or equations?]
+* Then we will focus on a question for which the Rosenzweig-MacArthur model (ODE)  is appropriate, I will write the model on board and ask all the assumptions they could see that are behind the model formulation. We will discuss in which regards they are appropriate for our question. 
+* Then we will study line by line a code in R to explain how this could be implemented in R, while also explaining the principle of numerical integration.
+* I will let them 5-10min  to run the model and plot some dynamics and ask them how they would use it to answer the question (to introduce the next section).
+
+
+# How to analyze a model? (Isa)
+
+(1h) Interactive lecture + based on a script for some parts
+
+(Rmarkdown file with the example of Rosenzweig-MacArthur model)
+
+* Analyze the behavior of the model long-term (Box 3 Grainger et al AmNat)
+  - Local stability (when possible for long term dynamics) (script)
+    + Calculating equilibria
+    + What are the Jacobian matrix and eigenvalues (meaning but no math derivation) ?
+    + How to interpret the eigenvalues to infer the long term behavior type
+* Isoclines / graphical 
+ *Phase plane (script)
+* Bifurcation diagrams (long term dynamics) (script)
+* When results depend on initial conditions => finding all the equilibria of intractable ODE systems (loop to run large series of initial conditions, function searchZeros of package nleqslv)
+
+* Model Usages to answer the question (will try to show some concrete examples of questions to answer with these usages for the model of section 3a)
+  - Parameter variation (see bifurcation diagrams + example DeMaz Grazing-Optimization)
+  - Comparison with a null model to assess the impact of a process (with or without the process, with different formulation of the process. Example with functional responses (script)
+  - Generation of synthetic data on which to run in silico experiments.     - Example of food webs under different regimes of perturbations.
+
+* Parameter exploration and robustness of conclusions
+  - Exhaustivity is possible	(tractable)
+  - We know the values of parameters from empirical data => allows us to fix or restrain the range of some parameters.
+  - Sensitivity analysis: effect size when varying 10% each parameter + look if conclusions are modified if the most sensitive parameters are varied.
+
+
+
+
+
+
+
+

@@ -4,13 +4,13 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Page not found | Theory-driven analysis of ecological data: a practical handbook</title>
+  <title>Part 6 How to analyze a model? (Isa) | Theory-driven analysis of ecological data: a practical handbook</title>
   <meta name="description" content="<p>This is a draft for our course on model-data.
 The HTML output format for this example is bookdown::gitbook,
 set in the _output.yml file.</p>" />
   <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Page not found | Theory-driven analysis of ecological data: a practical handbook" />
+  <meta property="og:title" content="Part 6 How to analyze a model? (Isa) | Theory-driven analysis of ecological data: a practical handbook" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="<p>This is a draft for our course on model-data.
@@ -19,7 +19,7 @@ set in the _output.yml file.</p>" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Page not found | Theory-driven analysis of ecological data: a practical handbook" />
+  <meta name="twitter:title" content="Part 6 How to analyze a model? (Isa) | Theory-driven analysis of ecological data: a practical handbook" />
   
   <meta name="twitter:description" content="<p>This is a draft for our course on model-data.
 The HTML output format for this example is bookdown::gitbook,
@@ -36,7 +36,7 @@ set in the _output.yml file.</p>" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
+<link rel="prev" href="how-to-build-a-model-isa.html"/>
 
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -252,18 +252,59 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="page-not-found" class="section level1">
-<h1>Page not found</h1>
-<p>The page you requested cannot be found (perhaps it was moved or renamed).</p>
-<p>You may want to try searching to find the page's new location, or use
-the table of contents to find the page you are looking for.</p>
+<div id="how-to-analyze-a-model-isa" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">Part 6</span> How to analyze a model? (Isa)<a href="how-to-analyze-a-model-isa.html#how-to-analyze-a-model-isa" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>(1h) Interactive lecture + based on a script for some parts</p>
+<p>(Rmarkdown file with the example of Rosenzweig-MacArthur model)</p>
+<ul>
+<li><p>Analyze the behavior of the model long-term (Box 3 Grainger et al AmNat)</p>
+<ul>
+<li>Local stability (when possible for long term dynamics) (script)
+<ul>
+<li>Calculating equilibria</li>
+<li>What are the Jacobian matrix and eigenvalues (meaning but no math derivation) ?</li>
+<li>How to interpret the eigenvalues to infer the long term behavior type</li>
+</ul></li>
+</ul></li>
+<li><p>Isoclines / graphical
+*Phase plane (script)</p></li>
+<li><p>Bifurcation diagrams (long term dynamics) (script)</p></li>
+<li><p>When results depend on initial conditions =&gt; finding all the equilibria of intractable ODE systems (loop to run large series of initial conditions, function searchZeros of package nleqslv)</p></li>
+<li><p>Model Usages to answer the question (will try to show some concrete examples of questions to answer with these usages for the model of section 3a)</p>
+<ul>
+<li>Parameter variation (see bifurcation diagrams + example DeMaz Grazing-Optimization)</li>
+<li>Comparison with a null model to assess the impact of a process (with or without the process, with different formulation of the process. Example with functional responses (script)</li>
+<li>Generation of synthetic data on which to run in silico experiments. - Example of food webs under different regimes of perturbations.</li>
+</ul></li>
+<li><p>Parameter exploration and robustness of conclusions</p>
+<ul>
+<li>Exhaustivity is possible (tractable)</li>
+<li>We know the values of parameters from empirical data =&gt; allows us to fix or restrain the range of some parameters.</li>
+<li>Sensitivity analysis: effect size when varying 10% each parameter + look if conclusions are modified if the most sensitive parameters are varied.</li>
+</ul></li>
+</ul>
+
+<div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0">
+<div class="csl-entry">
+Xie, Yihui. 2015. <em>Dynamic Documents with <span>R</span> and Knitr</em>. 2nd ed. Boca Raton, Florida: Chapman; Hall/CRC. <a href="http://yihui.org/knitr/">http://yihui.org/knitr/</a>.
 </div>
+<div class="csl-entry">
+———. 2023. <em>Bookdown: Authoring Books and Technical Documents with r Markdown</em>. <a href="https://github.com/rstudio/bookdown">https://github.com/rstudio/bookdown</a>.
+</div>
+</div>
+</div>
+
+
+
+
+
+
             </section>
 
           </div>
         </div>
       </div>
-
+<a href="how-to-build-a-model-isa.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
     </div>
   </div>
@@ -295,7 +336,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/%s",
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/03-what-models.Rmd",
 "text": "Edit"
 },
 "history": {
