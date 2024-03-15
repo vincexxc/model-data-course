@@ -2,92 +2,119 @@
 
 ## What system? What question? What hypotheses (no maths shown here)
 
-* Question is related to a specific level of organization / scale and determine what can be ignored
-* Examples of questions for each scale based on our recurrent example plant-herbivore (P-H)
-* Updated Levin's triangle illustrated by different (P-H) with related questions => define variables
-* What can be ignored? Upper level is slower than lower ones and its dynamics may be ignored
-* Link between assumptions, model and predictions, with the risk of overinterpretation 
-* The different types of assumptions (critical, exploratory, logistical)
-* Illustration of assumption types  with the Grazing-optimisation example
+* Question is related to a **specific level of organization** / scale and determine what can be ignored
+* Examples of questions and processes of interest for each scale based on our recurrent example plant-herbivore (P-H)
+* **Updated Levin's triangle** (Bullock 2014) illustrated by different (P-H) models (conceptual, system-specific, generic) with related questions => define variables
+* **What can be ignored?** The differences in time scale between processes allow to do some approximations: Upper level is slower than lower ones and its dynamics may be ignored depending on the question. Similarly, lower levels can be considered at equilibrium if much faster than the focal dynamics, or averaged (macroscale averaged view of microscale processes => physics statistics).
+* **Link between assumptions, model and predictions**, with the risk of overinterpretation: always keep in mind that what mathematical methods is truth only in the context of initial assumptions.
+* **The different types of assumptions** (Servedio 2014):
+  - Critical assumptions: the ones necessary to answer the question (structure of the model).
+  - Exploratory assumptions: the ones to go deeper in the exploration, assess the robustness of the results.
+  - Logistical assumptions: the ones that have to deal with tractability.
+* **Illustration of assumption types** with the Grazing-optimisation example (De mazancourt et al. 1998):
+  - Critical assumptions: two paths of recycling with different rates for plants and herbivores.
+  - Exploratory assumptions: change in the functional response.
+  - Logistical assumptions: use of deterministic ODEs and continuous time with no space (we'll see all that in more depth in next section).
 
 ## What model formalism? (no maths shown here)
 
 ### Deterministic – stochastic processes
 
-* What does stochasticity come from? Environmental, demographic, trait variability
-* When should we account for it (illustration with pop logistic growth (no math) with addition or not of gaussian noise)
+* **What does stochasticity come from?** 
+  - Environmental (eg: perturbations): does not scale with population size and can vary in space and time.
+  - Demographic (eg: more or less offsprings, trait variability that will impact biological rates): scales with population size. 
+* **When should we account for it** (illustration with pop logistic growth (no math) with addition or not of gaussian noise)
   - for questions related to output variability
-  - when output distribution is skewed and mean no more a good predictor (small pop)
-* When can we use deterministic: when processes can be summarised with averaged parameters
-* NB: mention of master equations (deterministic equation summarising stochastic model) 
+  - when output distribution is skewed and mean no more a good predictor (small populations) => when stochastic processes are dominant (ecological or genetical drifts, Allee effect, large demographic stochasticity)
+* **When can we use deterministic**: when processes can be summarised with averaged parameters (large populations)
+* NB: mention of master equations (deterministic equation summarizing stochastic model) 
 
 ### Time: discrete – continuous 
 
 How do the processes are structured along time?  when using discrete vs continuous time 
 
-* Discrete-time: 
-  - Fixed generation times
-  - Synchronization of processes (e.g., seasonal forcing)
-  - Sequential processes with specific order (e.g., complex life-cycle) => more transparent 
-* Continuous time: 
-  - Events can happen at any time
-  - Generation overlap
-* Illustration with logistic pop growth in continuous and discrete time:
+* **What are the underlying assumptions?**
+  - *Discrete-time*: 
+    - Fixed generation times
+    - Synchronization of processes (e.g., seasonal forcing)
+    - Sequential processes with specific order (e.g., complex life-cycle) => more transparent 
+  - *Continuous time*: 
+    - Events can happen at any time
+    - Generation overlap
+* **Illustration with logistic pop growth** in continuous and discrete time:
   - discrete-time with small ∆t boils down to continuous
   - discrete time have richer dynamics due to a lag
+* **Appropriate systems / questions**
+  - discrete-time:
+    - questions related to phenology
+    - seasonal dynamics and synchronized generations
+    - complex life cycled
+  - continuous-time:
+    - generation overlap
+    - when processes can happen at any time
 * Both can be either stochastic or deterministic
 
 ### Accounting for space 
-* None vs spatial: 
-  - TIB, example of space implicit; In none spatial models, space is assumed homogenous and the scale can be defined with the units (example: pop density in ind/km2)
-  - When does the question need it? Are spatial processes impacting local dynamics of interest or are we interested in patterns emerging at higher spatial scale from local processes? Implicit vs Explicit: does geographical positions  matter or only topology?
-* Topology versus Distances explicit
+* **None vs spatial**: 
+  - TIB, example of space implicit; In none spatial models, space is assumed homogenous and the scale can be integrated within the units (example: pop density in ind/km2)
+  - When does the question need it explicit space? 
+    - When spatial processes impact local dynamics of interest
+    - if we are interested in patterns emerging at higher spatial scale from local processes
+* **Topology versus Distances explicit**: does geographical positions  matter or only topology?
   - Topology (metapop model): space is represented in the structure of space and strength of connectivity. Adapted to study fragmented landscapes or problems related to structure of connectivity
-  - Explicit: distances are explicit; in 1 (Fisher KPP) or two dimensions (grid): adapted to represents fronts, gradients, edge effects; or if interested with emerging spatial patterns
-* Discrete within the distance explicit case: grids vs Continuous (PDE):
-  - Continuous adapted to model processes occurring progressing locally (diffusion) but not processes with large distance / heterogeneous effects
-  - Grids with small mesh size can boil down to continuous (sometimes, discretisation is used for a technical approximation of continuous space)  => question of technical relevance.
-  - As continuous can be more difficult (math) this can prevent its use (mention of lab heritage)
+  - Explicit: distances are explicit; in 1 (Fisher KPP) or two dimensions (grid): adapted to represents fronts, gradients, edge effects or emerging spatial patterns.
+* **Discrete within the distance explicit case**: grids vs Continuous (PDE):
+  - *Continuous* adapted to model processes occurring progressing locally (diffusion) but not processes with large distance / heterogeneous effects
+  - *Grids* with small mesh size can boil down to continuous (sometimes, discretisation is used for a technical approximation of continuous space)  => question of technical relevance.
+  - As continuous can be more difficult (math) this can prevent its use (mention of lab inheritance)
+
+  
 
 ## What technical choices?
 
 ### Analytical – Numerical
 
-* What do we gain in making models simple? => Principle of parcimony
-  - Analytical solution: we know the state of the model at any time point given
-  - Tractable model: We are able to express equilibrium with parameters and study local stability => we can say generalities about the long term dynamics
-  - Intractable models: we are obliged to do simulations using approximations (numerical algorithm or integration); the results depend on the parameter values and initial conditions.
+What do we gain in making models simple? => Principle of parcimony
+
+* **Analytical solution**: we know the state of the model at any time point given $\frac{dN}{dt} \rightarrow f(t)$
+* **Tractable model**: We are able to express equilibrium with parameters and study local stability $\frac{dN}{dt} \rightarrow N^*=f(parameters)$ => we can say generalities about the long term dynamics
+* **Intractable models**: 
+  - we are obliged to do simulations using numerical algorithm or integration to approximate the dynamics step by step.
+  - the results depend on the parameter values and initial conditions.
   - The dimension of the parameter space to explore is exponentially linked to the number of parameters
   - Simulations allow to investigate transient dynamics
 
 ### Rules versus Maths
 
-* What is an agent-based model? Algorithm which represent processes with a series of rules applied to each agent at each time step using proba: example with birth, death, interactions
-* What is the alternative: Math => equations: example of ODE, SDE, DE, PDE: what does it mean?
-  - ODE: change over time of our variable of interest (SDE; with some stochasticity)
+* **What is an agent-based model?** Algorithm which represent processes with a series of rules applied to each agent at each time step using proba: example with birth, death, interactions
+* **What is the alternative**: Math => equations: example of ODE, SDE, DE, PDE: what does it mean?
+  - ODE: change over time of our variable of interest (SDE; with some stochasticity) => give
   - DE: State at the next time step
   - PDE: Change over time and space
-* Advantages / Disadvantages:
-  - ABM: 
+  - Overall idea: Balance between inputs and outputs. See with exponential model?
+
+* **Advantages / Disadvantages**:
+  - *ABM*: 
     + The dynamics emerge from elemental processes
     + Simpler to build from empirical knowledge
     + But high computation consumption
     + Rarely tractable
-  - Equations
+  - *Equations*
     + Use of math and approximation for simplifications
     + Have large analysis power for extreme cases
     + Fast computation
     + Easier to fit to data 
     + The relations between variables are imposed: processes synthetized
-* To what questions / system/ conditions is it most adapted?
-  - ABM: 
+* **To what questions / system/ conditions is it most adapted?**
+  - *ABM*: 
     + When stochastic processes are dominant (ex: conservation of small pops) 
-    + When there are no too many parameters
+    + When there are not too many parameters
     + For some questions where processes are difficult to synthesise (behaviour)
     + When there is no math skills around!
-  - Equations:
+  - *Equations*:
     + Whenever processes can be synthesised with average parameters
     + => Large populations
+* Such choices are often an inheritance from lab practices and habits.
 
 ## Some classical models used in ecology and seen next days 
 
@@ -97,7 +124,8 @@ How do the processes are structured along time?  when using discrete vs continuo
 * Spatial systems of differential equations: TIB, Levins’ occupancy (Day3)
 * Spatial IBM: Neutral model of biodiversity from Hubbel (Day 3)
 
-A Rmarkdown file will be available to provide the code of the illustrations of  section 2.2
+A Rmarkdown file is available to provide the code of the illustrations of  section 2.2
+
 
 #  How to build a model? (Isa)
 (1h)  Lecture with interactivity  (and Rmarkdown file for some parts)
