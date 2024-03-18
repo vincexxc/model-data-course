@@ -43,3 +43,4 @@ rules-versus-maths
 some-classical-models-used-in-ecology-and-seen-next-days
 how-to-build-a-model-isa
 how-to-analyze-a-model-isa
+url-your-book-url-like-httpsbookdown.orgyihuibookdown
