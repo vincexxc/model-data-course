@@ -4,13 +4,13 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Page not found | Theory-driven analysis of ecological data: a practical handbook</title>
+  <title>Part 7 Spatial data (Day 3) | Theory-driven analysis of ecological data: a practical handbook</title>
   <meta name="description" content="<p>This is a draft for our course on model-data.
 The HTML output format for this example is bookdown::gitbook,
 set in the _output.yml file.</p>" />
   <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Page not found | Theory-driven analysis of ecological data: a practical handbook" />
+  <meta property="og:title" content="Part 7 Spatial data (Day 3) | Theory-driven analysis of ecological data: a practical handbook" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="<p>This is a draft for our course on model-data.
@@ -19,7 +19,7 @@ set in the _output.yml file.</p>" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Page not found | Theory-driven analysis of ecological data: a practical handbook" />
+  <meta name="twitter:title" content="Part 7 Spatial data (Day 3) | Theory-driven analysis of ecological data: a practical handbook" />
   
   <meta name="twitter:description" content="<p>This is a draft for our course on model-data.
 The HTML output format for this example is bookdown::gitbook,
@@ -36,7 +36,7 @@ set in the _output.yml file.</p>" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
+<link rel="prev" href="how-to-analyze-a-model-isa.html"/>
 
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -266,18 +266,83 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="page-not-found" class="section level1">
-<h1>Page not found</h1>
-<p>The page you requested cannot be found (perhaps it was moved or renamed).</p>
-<p>You may want to try searching to find the page's new location, or use
-the table of contents to find the page you are looking for.</p>
+<div id="spatial-data-day-3" class="section level1 hasAnchor" number="7">
+<h1><span class="header-section-number">Part 7</span> Spatial data (Day 3)<a href="spatial-data-day-3.html#spatial-data-day-3" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="introduction" class="section level2 hasAnchor" number="7.1">
+<h2><span class="header-section-number">7.1</span> Introduction<a href="spatial-data-day-3.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Comapre to Day 2, we will increase scale to consider</p>
+<p>Definition of a community and examples</p>
+<p>The typical spatial dataset: a community matrix (sites*species), with either presence/absence, or detection/non detection, or abundance, or presence only, data
+We might also have additional data: species traits, environmental variables, phylogenetic relationships</p>
+<p>The typical questions we want to address</p>
 </div>
+<div id="theoretical-frameworks-toattack-these-issues" class="section level2 hasAnchor" number="7.2">
+<h2><span class="header-section-number">7.2</span> Theoretical frameworks toattack these issues<a href="spatial-data-day-3.html#theoretical-frameworks-toattack-these-issues" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We present three general frameworks used in this context:
+– The habitat filtering approach
+– The metacommunity framework
+– Vellend’s community ecology theory framework
+We list strengths/advantages for each framework
+We point to this <a href="https://reflectionsonpaperspast.wordpress.com/">cool website</a> for reflections from Vellend and Leibold on the fundamental publications introducing frameworks (2) and (3)</p>
+</div>
+<div id="data-driven-statistical-approaches" class="section level2 hasAnchor" number="7.3">
+<h2><span class="header-section-number">7.3</span> DATA-DRIVEN (STATISTICAL) APPROACHES<a href="spatial-data-day-3.html#data-driven-statistical-approaches" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="community-level-methods" class="section level3 hasAnchor" number="7.3.1">
+<h3><span class="header-section-number">7.3.1</span> Community level methods<a href="spatial-data-day-3.html#community-level-methods" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Unconstrained do not directly use environmental variables: a posteriori associations (PCA…)
+Constrained methods simultaneously consider species composition and environmental descriptors (RDA…)
+Short focus on Cottenie’s approach of partitioning variance (partialRDA + PCNM) with examples from mollusk communities in the French Antilles
+### Species level methods
+Permutation approaches, the Cscore, etc.. ==&gt; make a connection with Day 4 here (networks and permutations)
+We mention the fact that even without interactions, several processes may yield spurious species associations (e.g. Calcagno et al. 2022)
+Species Distribution Models
+Occupancy models: their hallmark is to add a detection layer (probability to detect a species when it is present). We will talk more about this in the next section (mechanistic approaches)</p>
+</div>
+</div>
+<div id="process-driven-mechanistic-approaches" class="section level2 hasAnchor" number="7.4">
+<h2><span class="header-section-number">7.4</span> PROCESS-DRIVEN (MECHANISTIC) APPROACHES<a href="spatial-data-day-3.html#process-driven-mechanistic-approaches" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="patch-occupancy-models" class="section level3 hasAnchor" number="7.4.1">
+<h3><span class="header-section-number">7.4.1</span> Patch-occupancy models<a href="spatial-data-day-3.html#patch-occupancy-models" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We start by introducing the two simplest and historically important models! Levins (1969) and McArthur &amp; Wilson (1967) models.
+We highlight the mathematical connection between Levins’ model and the logistic model seen on the previous Day
+There is an intrinsic covariation of r and K in this formulation!
+We compute the equilibrium occupancies in the two models
+We introduce the MW model of island biogeography: why are the curves non linear? We make them reflect on this, and ton the role of species trait variation in (c,e)
+We present the example of fitting this model to island presence/absence data: data from Manne et al. (1998) J. Anim. Ecol.</p>
+<p>We then discuss possible extensions:
+– explicit space (IFM models from Hanski and followers)
+– competition/colonization trade-offs, spatial networks, trophic webs…</p>
+<p>### Models with explicit abundance dynamics in patches
+These models quickly become complicated and need to be simulated.
+One exception is Hubbel’s neutral model, which has a dynamics for species abundances in patches and remains reasonably tractable
+One example of simulation framework for metacommunities is Thompson et al. (2020) Ecology Letters. This is the one we will use to simulate data in the afternoon practical.</p>
+</div>
+</div>
+<div id="conclusion" class="section level2 hasAnchor" number="7.5">
+<h2><span class="header-section-number">7.5</span> Conclusion<a href="spatial-data-day-3.html#conclusion" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+
+<div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0">
+<div class="csl-entry">
+Xie, Yihui. 2015. <em>Dynamic Documents with <span>R</span> and Knitr</em>. 2nd ed. Boca Raton, Florida: Chapman; Hall/CRC. <a href="http://yihui.org/knitr/">http://yihui.org/knitr/</a>.
+</div>
+<div class="csl-entry">
+———. 2023. <em>Bookdown: Authoring Books and Technical Documents with r Markdown</em>. <a href="https://github.com/rstudio/bookdown">https://github.com/rstudio/bookdown</a>.
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
             </section>
 
           </div>
         </div>
       </div>
-
+<a href="how-to-analyze-a-model-isa.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
     </div>
   </div>
@@ -309,7 +374,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/%s",
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/04-Spatial-data.Rmd",
 "text": "Edit"
 },
 "history": {

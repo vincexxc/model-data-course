@@ -1,5 +1,15 @@
 # Why mathematical models? (Sonia)
 
+
+To read:
+Deep Symbolic Regression for Physics Guided by Units Constraints: Toward the Automated Discovery of Physical Laws
+<https://iopscience.iop.org/article/10.3847/1538-4357/ad014>
+
+Une intelligence artificielle retrouve des lois physiques à partir de données scientifiques
+<https://www.insu.cnrs.fr/fr/cnrsinfo/une-intelligence-artificielle-retrouve-des-lois-physiques-partir-de-donnees-scientifiques#:~:text=La%20m%C3%A9thode%20d'intelligence%20artificielle,ces%20r%C3%A8gles%20d'analyse%20dimensionnelle>
+
+
+
 ## Big data
 
 According to IBM, every day humanity generates 2.5 trillion (2.5 billion billion) bytes of text, image and sound data (<https://www-01.ibm.com/software/fr/data/bigdata>). Acceleration of information accumulation. We can learn from massive amount of data available.
@@ -63,10 +73,10 @@ These goals typically compete with each other so real models are mathematical de
 
 ## Purpose of science?
 
-Understand and predict. 
+Understand (and predict). 
 
 
-## Can we do that with big data (data analysis?)
+## Can we do that with big data analysis?
 
 Big data analysis reveals correlations. (Again, this can be useful)
 But those correlations are not causal. 

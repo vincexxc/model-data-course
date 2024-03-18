@@ -28,7 +28,7 @@ big-data
 what-is-theory
 whats-a-model
 purpose-of-science
-can-we-do-that-with-big-data-data-analysis
+can-we-do-that-with-big-data-analysis
 the-scientific-method
 a-feedback-loop-involving-data-and-models
 what-types-of-theoretical-models-in-ecology-isa
@@ -43,4 +43,11 @@ rules-versus-maths
 some-classical-models-used-in-ecology-and-seen-next-days
 how-to-build-a-model-isa
 how-to-analyze-a-model-isa
-url-your-book-url-like-httpsbookdown.orgyihuibookdown
+spatial-data-day-3
+introduction
+theoretical-frameworks-toattack-these-issues
+data-driven-statistical-approaches
+community-level-methods
+process-driven-mechanistic-approaches
+patch-occupancy-models
+conclusion

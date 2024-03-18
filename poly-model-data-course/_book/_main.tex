@@ -120,7 +120,7 @@
 
 \title{Theory-driven analysis of ecological data: a practical handbook}
 \author{us}
-\date{2024-03-14}
+\date{2024-03-18}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -380,6 +380,13 @@ Who is the textbook for?
 
 \chapter{Why mathematical models? (Sonia)}\label{why-mathematical-models-sonia}
 
+To read:
+Deep Symbolic Regression for Physics Guided by Units Constraints: Toward the Automated Discovery of Physical Laws
+\url{https://iopscience.iop.org/article/10.3847/1538-4357/ad014}
+
+Une intelligence artificielle retrouve des lois physiques à partir de données scientifiques
+\url{https://www.insu.cnrs.fr/fr/cnrsinfo/une-intelligence-artificielle-retrouve-des-lois-physiques-partir-de-donnees-scientifiques\#:~:text=La\%20m\%C3\%A9thode\%20d'intelligence\%20artificielle,ces\%20r\%C3\%A8gles\%20d'analyse\%20dimensionnelle}
+
 \section{Big data}\label{big-data}
 
 According to IBM, every day humanity generates 2.5 trillion (2.5 billion billion) bytes of text, image and sound data (\url{https://www-01.ibm.com/software/fr/data/bigdata}). Acceleration of information accumulation. We can learn from massive amount of data available.
@@ -451,9 +458,9 @@ These goals typically compete with each other so real models are mathematical de
 
 \section{Purpose of science?}\label{purpose-of-science}
 
-Understand and predict.
+Understand (and predict).
 
-\section{Can we do that with big data (data analysis?)}\label{can-we-do-that-with-big-data-data-analysis}
+\section{Can we do that with big data analysis?}\label{can-we-do-that-with-big-data-analysis}
 
 Big data analysis reveals correlations. (Again, this can be useful)
 But those correlations are not causal.
@@ -546,19 +553,39 @@ This is why this course/book!
 \begin{itemize}
 \tightlist
 \item
-  Question is related to a specific level of organization / scale and determine what can be ignored
+  Question is related to a \textbf{specific level of organization} / scale and determine what can be ignored
 \item
-  Examples of questions for each scale based on our recurrent example plant-herbivore (P-H)
+  Examples of questions and processes of interest for each scale based on our recurrent example plant-herbivore (P-H)
 \item
-  Updated Levin's triangle illustrated by different (P-H) with related questions =\textgreater{} define variables
+  \textbf{Updated Levin's triangle} (Bullock 2014) illustrated by different (P-H) models (conceptual, system-specific, generic) with related questions =\textgreater{} define variables
 \item
-  What can be ignored? Upper level is slower than lower ones and its dynamics may be ignored
+  \textbf{What can be ignored?} The differences in time scale between processes allow to do some approximations: Upper level is slower than lower ones and its dynamics may be ignored depending on the question. Similarly, lower levels can be considered at equilibrium if much faster than the focal dynamics, or averaged (macroscale averaged view of microscale processes =\textgreater{} physics statistics).
 \item
-  Link between assumptions, model and predictions, with the risk of overinterpretation
+  \textbf{Link between assumptions, model and predictions}, with the risk of overinterpretation: always keep in mind that what mathematical methods is truth only in the context of initial assumptions.
 \item
-  The different types of assumptions (critical, exploratory, logistical)
+  \textbf{The different types of assumptions} (Servedio 2014):
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Critical assumptions: the ones necessary to answer the question (structure of the model).
+  \item
+    Exploratory assumptions: the ones to go deeper in the exploration, assess the robustness of the results.
+  \item
+    Logistical assumptions: the ones that have to deal with tractability.
+  \end{itemize}
 \item
-  Illustration of assumption types with the Grazing-optimisation example
+  \textbf{Illustration of assumption types} with the Grazing-optimisation example (De mazancourt et al.~1998):
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Critical assumptions: two paths of recycling with different rates for plants and herbivores.
+  \item
+    Exploratory assumptions: change in the functional response.
+  \item
+    Logistical assumptions: use of deterministic ODEs and continuous time with no space (we'll see all that in more depth in next section).
+  \end{itemize}
 \end{itemize}
 
 \section{What model formalism? (no maths shown here)}\label{what-model-formalism-no-maths-shown-here}
@@ -568,21 +595,29 @@ This is why this course/book!
 \begin{itemize}
 \tightlist
 \item
-  What does stochasticity come from? Environmental, demographic, trait variability
+  \textbf{What does stochasticity come from?}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Environmental (eg: perturbations): does not scale with population size and can vary in space and time.
+  \item
+    Demographic (eg: more or less offsprings, trait variability that will impact biological rates): scales with population size.
+  \end{itemize}
 \item
-  When should we account for it (illustration with pop logistic growth (no math) with addition or not of gaussian noise)
+  \textbf{When should we account for it} (illustration with pop logistic growth (no math) with addition or not of gaussian noise)
 
   \begin{itemize}
   \tightlist
   \item
     for questions related to output variability
   \item
-    when output distribution is skewed and mean no more a good predictor (small pop)
+    when output distribution is skewed and mean no more a good predictor (small populations) =\textgreater{} when stochastic processes are dominant (ecological or genetical drifts, Allee effect, large demographic stochasticity)
   \end{itemize}
 \item
-  When can we use deterministic: when processes can be summarised with averaged parameters
+  \textbf{When can we use deterministic}: when processes can be summarised with averaged parameters (large populations)
 \item
-  NB: mention of master equations (deterministic equation summarising stochastic model)
+  NB: mention of master equations (deterministic equation summarizing stochastic model)
 \end{itemize}
 
 \subsection{Time: discrete -- continuous}\label{time-discrete-continuous}
@@ -592,29 +627,35 @@ How do the processes are structured along time? when using discrete vs continuou
 \begin{itemize}
 \tightlist
 \item
-  Discrete-time:
+  \textbf{What are the underlying assumptions?}
 
   \begin{itemize}
   \tightlist
   \item
-    Fixed generation times
-  \item
-    Synchronization of processes (e.g., seasonal forcing)
-  \item
-    Sequential processes with specific order (e.g., complex life-cycle) =\textgreater{} more transparent
-  \end{itemize}
-\item
-  Continuous time:
+    \emph{Discrete-time}:
 
-  \begin{itemize}
-  \tightlist
+    \begin{itemize}
+    \tightlist
+    \item
+      Fixed generation times
+    \item
+      Synchronization of processes (e.g., seasonal forcing)
+    \item
+      Sequential processes with specific order (e.g., complex life-cycle) =\textgreater{} more transparent
+    \end{itemize}
   \item
-    Events can happen at any time
-  \item
-    Generation overlap
+    \emph{Continuous time}:
+
+    \begin{itemize}
+    \tightlist
+    \item
+      Events can happen at any time
+    \item
+      Generation overlap
+    \end{itemize}
   \end{itemize}
 \item
-  Illustration with logistic pop growth in continuous and discrete time:
+  \textbf{Illustration with logistic pop growth} in continuous and discrete time:
 
   \begin{itemize}
   \tightlist
@@ -622,6 +663,34 @@ How do the processes are structured along time? when using discrete vs continuou
     discrete-time with small ∆t boils down to continuous
   \item
     discrete time have richer dynamics due to a lag
+  \end{itemize}
+\item
+  \textbf{Appropriate systems / questions}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    discrete-time:
+
+    \begin{itemize}
+    \tightlist
+    \item
+      questions related to phenology
+    \item
+      seasonal dynamics and synchronized generations
+    \item
+      complex life cycled
+    \end{itemize}
+  \item
+    continuous-time:
+
+    \begin{itemize}
+    \tightlist
+    \item
+      generation overlap
+    \item
+      when processes can happen at any time
+    \end{itemize}
   \end{itemize}
 \item
   Both can be either stochastic or deterministic
@@ -632,36 +701,44 @@ How do the processes are structured along time? when using discrete vs continuou
 \begin{itemize}
 \tightlist
 \item
-  None vs spatial:
+  \textbf{None vs spatial}:
 
   \begin{itemize}
   \tightlist
   \item
-    TIB, example of space implicit; In none spatial models, space is assumed homogenous and the scale can be defined with the units (example: pop density in ind/km2)
+    TIB, example of space implicit; In none spatial models, space is assumed homogenous and the scale can be integrated within the units (example: pop density in ind/km2)
   \item
-    When does the question need it? Are spatial processes impacting local dynamics of interest or are we interested in patterns emerging at higher spatial scale from local processes? Implicit vs Explicit: does geographical positions matter or only topology?
+    When does the question need it explicit space?
+
+    \begin{itemize}
+    \tightlist
+    \item
+      When spatial processes impact local dynamics of interest
+    \item
+      if we are interested in patterns emerging at higher spatial scale from local processes
+    \end{itemize}
   \end{itemize}
 \item
-  Topology versus Distances explicit
+  \textbf{Topology versus Distances explicit}: does geographical positions matter or only topology?
 
   \begin{itemize}
   \tightlist
   \item
     Topology (metapop model): space is represented in the structure of space and strength of connectivity. Adapted to study fragmented landscapes or problems related to structure of connectivity
   \item
-    Explicit: distances are explicit; in 1 (Fisher KPP) or two dimensions (grid): adapted to represents fronts, gradients, edge effects; or if interested with emerging spatial patterns
+    Explicit: distances are explicit; in 1 (Fisher KPP) or two dimensions (grid): adapted to represents fronts, gradients, edge effects or emerging spatial patterns.
   \end{itemize}
 \item
-  Discrete within the distance explicit case: grids vs Continuous (PDE):
+  \textbf{Discrete within the distance explicit case}: grids vs Continuous (PDE):
 
   \begin{itemize}
   \tightlist
   \item
-    Continuous adapted to model processes occurring progressing locally (diffusion) but not processes with large distance / heterogeneous effects
+    \emph{Continuous} adapted to model processes occurring progressing locally (diffusion) but not processes with large distance / heterogeneous effects
   \item
-    Grids with small mesh size can boil down to continuous (sometimes, discretisation is used for a technical approximation of continuous space) =\textgreater{} question of technical relevance.
+    \emph{Grids} with small mesh size can boil down to continuous (sometimes, discretisation is used for a technical approximation of continuous space) =\textgreater{} question of technical relevance.
   \item
-    As continuous can be more difficult (math) this can prevent its use (mention of lab heritage)
+    As continuous can be more difficult (math) this can prevent its use (mention of lab inheritance)
   \end{itemize}
 \end{itemize}
 
@@ -669,19 +746,23 @@ How do the processes are structured along time? when using discrete vs continuou
 
 \subsection{Analytical -- Numerical}\label{analytical-numerical}
 
+What do we gain in making models simple? =\textgreater{} Principle of parcimony
+
 \begin{itemize}
 \tightlist
 \item
-  What do we gain in making models simple? =\textgreater{} Principle of parcimony
+  \textbf{Analytical solution}: we know the state of the model at any time point given \(\frac{dN}{dt} \rightarrow f(t)\)
+\item
+  \textbf{Tractable model}: We are able to express equilibrium with parameters and study local stability \(\frac{dN}{dt} \rightarrow N^*=f(parameters)\) =\textgreater{} we can say generalities about the long term dynamics
+\item
+  \textbf{Intractable models}:
 
   \begin{itemize}
   \tightlist
   \item
-    Analytical solution: we know the state of the model at any time point given
+    we are obliged to do simulations using numerical algorithm or integration to approximate the dynamics step by step.
   \item
-    Tractable model: We are able to express equilibrium with parameters and study local stability =\textgreater{} we can say generalities about the long term dynamics
-  \item
-    Intractable models: we are obliged to do simulations using approximations (numerical algorithm or integration); the results depend on the parameter values and initial conditions.
+    the results depend on the parameter values and initial conditions.
   \item
     The dimension of the parameter space to explore is exponentially linked to the number of parameters
   \item
@@ -694,26 +775,28 @@ How do the processes are structured along time? when using discrete vs continuou
 \begin{itemize}
 \tightlist
 \item
-  What is an agent-based model? Algorithm which represent processes with a series of rules applied to each agent at each time step using proba: example with birth, death, interactions
+  \textbf{What is an agent-based model?} Algorithm which represent processes with a series of rules applied to each agent at each time step using proba: example with birth, death, interactions
 \item
-  What is the alternative: Math =\textgreater{} equations: example of ODE, SDE, DE, PDE: what does it mean?
+  \textbf{What is the alternative}: Math =\textgreater{} equations: example of ODE, SDE, DE, PDE: what does it mean?
 
   \begin{itemize}
   \tightlist
   \item
-    ODE: change over time of our variable of interest (SDE; with some stochasticity)
+    ODE: change over time of our variable of interest (SDE; with some stochasticity) =\textgreater{} give
   \item
     DE: State at the next time step
   \item
     PDE: Change over time and space
+  \item
+    Overall idea: Balance between inputs and outputs. See with exponential model?
   \end{itemize}
 \item
-  Advantages / Disadvantages:
+  \textbf{Advantages / Disadvantages}:
 
   \begin{itemize}
   \tightlist
   \item
-    ABM:
+    \emph{ABM}:
 
     \begin{itemize}
     \tightlist
@@ -727,7 +810,7 @@ How do the processes are structured along time? when using discrete vs continuou
       Rarely tractable
     \end{itemize}
   \item
-    Equations
+    \emph{Equations}
 
     \begin{itemize}
     \tightlist
@@ -744,26 +827,26 @@ How do the processes are structured along time? when using discrete vs continuou
     \end{itemize}
   \end{itemize}
 \item
-  To what questions / system/ conditions is it most adapted?
+  \textbf{To what questions / system/ conditions is it most adapted?}
 
   \begin{itemize}
   \tightlist
   \item
-    ABM:
+    \emph{ABM}:
 
     \begin{itemize}
     \tightlist
     \item
       When stochastic processes are dominant (ex: conservation of small pops)
     \item
-      When there are no too many parameters
+      When there are not too many parameters
     \item
       For some questions where processes are difficult to synthesise (behaviour)
     \item
       When there is no math skills around!
     \end{itemize}
   \item
-    Equations:
+    \emph{Equations}:
 
     \begin{itemize}
     \tightlist
@@ -773,6 +856,8 @@ How do the processes are structured along time? when using discrete vs continuou
       =\textgreater{} Large populations
     \end{itemize}
   \end{itemize}
+\item
+  Such choices are often an inheritance from lab practices and habits.
 \end{itemize}
 
 \section{Some classical models used in ecology and seen next days}\label{some-classical-models-used-in-ecology-and-seen-next-days}
@@ -795,7 +880,7 @@ How do the processes are structured along time? when using discrete vs continuou
   Spatial IBM: Neutral model of biodiversity from Hubbel (Day 3)
 \end{itemize}
 
-A Rmarkdown file will be available to provide the code of the illustrations of section 2.2
+A Rmarkdown file is available to provide the code of the illustrations of section 2.2
 
 \chapter{How to build a model? (Isa)}\label{how-to-build-a-model-isa}
 
@@ -872,6 +957,63 @@ A Rmarkdown file will be available to provide the code of the illustrations of s
     Sensitivity analysis: effect size when varying 10\% each parameter + look if conclusions are modified if the most sensitive parameters are varied.
   \end{itemize}
 \end{itemize}
+
+\chapter{Spatial data (Day 3)}\label{spatial-data-day-3}
+
+\section{Introduction}\label{introduction}
+
+Comapre to Day 2, we will increase scale to consider
+
+Definition of a community and examples
+
+The typical spatial dataset: a community matrix (sites*species), with either presence/absence, or detection/non detection, or abundance, or presence only, data
+We might also have additional data: species traits, environmental variables, phylogenetic relationships
+
+The typical questions we want to address
+
+\section{Theoretical frameworks toattack these issues}\label{theoretical-frameworks-toattack-these-issues}
+
+We present three general frameworks used in this context:
+-- The habitat filtering approach
+-- The metacommunity framework
+-- Vellend's community ecology theory framework
+We list strengths/advantages for each framework
+We point to this \href{https://reflectionsonpaperspast.wordpress.com/}{cool website} for reflections from Vellend and Leibold on the fundamental publications introducing frameworks (2) and (3)
+
+\section{DATA-DRIVEN (STATISTICAL) APPROACHES}\label{data-driven-statistical-approaches}
+
+\subsection{Community level methods}\label{community-level-methods}
+
+Unconstrained do not directly use environmental variables: a posteriori associations (PCA\ldots)
+Constrained methods simultaneously consider species composition and environmental descriptors (RDA\ldots)
+Short focus on Cottenie's approach of partitioning variance (partialRDA + PCNM) with examples from mollusk communities in the French Antilles
+\#\#\#~Species level methods
+Permutation approaches, the Cscore, etc.. ==\textgreater{} make a connection with Day 4 here (networks and permutations)
+We mention the fact that even without interactions, several processes may yield spurious species associations (e.g.~Calcagno et al.~2022)
+Species Distribution Models
+Occupancy models: their hallmark is to add a detection layer (probability to detect a species when it is present). We will talk more about this in the next section (mechanistic approaches)
+
+\section{PROCESS-DRIVEN (MECHANISTIC) APPROACHES}\label{process-driven-mechanistic-approaches}
+
+\subsection{Patch-occupancy models}\label{patch-occupancy-models}
+
+We start by introducing the two simplest and historically important models! Levins (1969) and McArthur \& Wilson (1967) models.
+We highlight the mathematical connection between Levins' model and the logistic model seen on the previous Day
+There is an intrinsic covariation of r and K in this formulation!
+We compute the equilibrium occupancies in the two models
+We introduce the MW model of island biogeography: why are the curves non linear? We make them reflect on this, and ton the role of species trait variation in (c,e)
+We present the example of fitting this model to island presence/absence data: data from Manne et al.~(1998) J. Anim. Ecol.
+
+We then discuss possible extensions:
+-- explicit space (IFM models from Hanski and followers)
+-- competition/colonization trade-offs, spatial networks, trophic webs\ldots{}
+
+\#\#\#~Models with explicit abundance dynamics in patches
+These models quickly become complicated and need to be simulated.
+One exception is Hubbel's neutral model, which has a dynamics for species abundances in patches and remains reasonably tractable
+One example of simulation framework for metacommunities is Thompson et al.~(2020) Ecology Letters. This is the one we will use to simulate data in the afternoon practical.
+
+\section{Conclusion}\label{conclusion}
 
   \bibliography{book.bib,packages.bib}
 
