@@ -1,0 +1,53 @@
+# Spatial data (Day 3)
+
+## Introduction
+Comapre to Day 2, we will increase scale to consider 
+
+Definition of a community and examples
+
+The typical spatial dataset: a community matrix (sites*species), with either presence/absence, or detection/non detection, or abundance, or presence only, data
+We might also have additional data: species traits, environmental variables, phylogenetic relationships
+
+The typical questions we want to address
+
+## Theoretical frameworks toattack these issues
+We present three general frameworks used in this context:
+-- The habitat filtering approach
+-- The metacommunity framework
+-- Vellend's community ecology theory framework
+We list strengths/advantages for each framework
+We point to this [cool website](https://reflectionsonpaperspast.wordpress.com/) for reflections from Vellend and Leibold on the fundamental publications introducing frameworks (2) and (3)
+
+## DATA-DRIVEN (STATISTICAL) APPROACHES
+
+### Community level methods
+Unconstrained do not directly use environmental variables: a posteriori associations (PCA...)
+Constrained methods simultaneously consider species composition and environmental descriptors (RDA...)
+Short focus on Cottenie's approach of partitioning variance (partialRDA + PCNM) with examples from mollusk communities in the French Antilles
+### Species level methods
+Permutation approaches, the Cscore, etc.. ==> make a connection with Day 4 here (networks and permutations)
+We mention the fact that even without interactions, several processes may yield spurious species associations (e.g. Calcagno et al. 2022)
+Species Distribution Models
+Occupancy models: their hallmark is to add a detection layer (probability to detect a species when it is present). We will talk more about this in the next section (mechanistic approaches)
+
+## PROCESS-DRIVEN (MECHANISTIC) APPROACHES
+
+### Patch-occupancy models
+
+We start by introducing the two simplest and historically important models! Levins (1969) and McArthur & Wilson (1967) models.
+We highlight the mathematical connection between Levins' model and the logistic model seen on the previous Day
+There is an intrinsic covariation of r and K in this formulation!
+We compute the equilibrium occupancies in the two models
+We introduce the MW model of island biogeography: why are the curves non linear? We make them reflect on this, and ton the role of species trait variation in (c,e)
+We present the example of fitting this model to island presence/absence data: data from Manne et al. (1998) J. Anim. Ecol.
+
+We then discuss possible extensions:
+-- explicit space (IFM models from Hanski and followers)
+-- competition/colonization trade-offs, spatial networks, trophic webs...
+
+### Models with explicit abundance dynamics in patches
+These models quickly become complicated and need to be simulated.
+One exception is Hubbel's neutral model, which has a dynamics for species abundances in patches and remains reasonably tractable
+One example of simulation framework for metacommunities is Thompson et al. (2020) Ecology Letters. This is the one we will use to simulate data in the afternoon practical.
+
+## Conclusion
