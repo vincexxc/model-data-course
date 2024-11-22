@@ -34,7 +34,7 @@
             "issued": {
                 "date-parts": [
                     [
-                        2023
+                        2024
                     ]
                 ]
             },
@@ -138,11 +138,11 @@
             "issued": {
                 "date-parts": [
                     [
-                        2023
+                        2024
                     ]
                 ]
             },
-            "note": "R package version 2.25, https://pkgs.rstudio.com/rmarkdown/",
+            "note": "R package version 2.26, https://pkgs.rstudio.com/rmarkdown/",
             "title": "Rmarkdown: Dynamic documents for r",
             "title-short": "Rmarkdown",
             "type": "book"
