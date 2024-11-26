@@ -4,7 +4,34 @@
 
 * Question is related to a **specific level of organization** / scale and determine what can be ignored
 * Examples of questions and processes of interest for each scale based on our recurrent example plant-herbivore (P-H)
-* **Updated Levin's triangle** (Bullock 2014) illustrated by different (P-H) models (conceptual, system-specific, generic) with related questions => define variables
+* *Updated Levin's triangle (Bullock 2014) illustrated by different (P-H) models (conceptual, system-specific, generic) with related questions => define variables*
+
+**Categorisation of models**
+
+We identify trade-offs in ecological models, choices between them should be based on our goals.
+
+* Our goal with mechanistic models can be:
+  - understanding processes
+  - extrapolating beyond observed variables
+  - what if ? questioning
+
+The strength of process-based model in general: we capture ecological mechanisms to explain a specific pattern/relationship, but then the model predicts other patterns, beyond the ones that inspired initally the model. The diversity of patterns that are expected from mechanistic models allow to discriminate which model produces patterns the closest from reality. Process-based models feed our understanding of the consequences of the ecological process we modeled.
+
+Possibility of nesting several process-based models in a broader framework (e.g., niche model to get the topology and then use this topology in a dynamical food web model.
+
+
+* Trade-offs:
+  - simple versus complex (number of variables and parameters, number of mechanisms...) (--> complex models are not useful if not enough data. Principle of parsimony)
+
+  - generic versus specific 
+  - abstract versus realistic
+  - tractable versus intractable (analytical solutions or not ? Calculation time ?)
+  - (strategic (=generic+simple) versus tactical (complex+specific)) terminology attributed to Holling)
+
+ * Other axis : data-driven versus process-based models
+   - data-driven models are based on data, based on patterns not processes. Limited by the data available. 
+    - mechanistic models: based on ecological processes
+
 * **What can be ignored?** The differences in time scale between processes allow to do some approximations: Upper level is slower than lower ones and its dynamics may be ignored depending on the question. Similarly, lower levels can be considered at equilibrium if much faster than the focal dynamics, or averaged (macroscale averaged view of microscale processes => physics statistics).
 * **Link between assumptions, model and predictions**, with the risk of overinterpretation: always keep in mind that what mathematical methods is truth only in the context of initial assumptions.
 * **The different types of assumptions** (Servedio 2014):
@@ -18,7 +45,15 @@
 
 ## What model formalism? (no maths shown here)
 
+* **Types of variables**: quantitative discrete or continuous variables ? How to describe the variables? Example: if stochastic processes: demographic stochasticity has to be with counts (integer). Small populations.
+But if large populations where stochasticity is not important: then it is fine to use continuous variables. It could be equivalent to use a lognormal distribution rather than a Poisson distribution.
+
 ### Deterministic – stochastic processes
+
+* What is stochasticity ? Give a clear definition here. Use randomness instead ? What is a stochastic model ?
+Probabilities around a process
+
+Random environmental conditions : a each time step, probability of have a given value
 
 * **What does stochasticity come from?** 
   - Environmental (eg: perturbations): does not scale with population size and can vary in space and time.
@@ -28,6 +63,11 @@
   - when output distribution is skewed and mean no more a good predictor (small populations) => when stochastic processes are dominant (ecological or genetical drifts, Allee effect, large demographic stochasticity)
 * **When can we use deterministic**: when processes can be summarised with averaged parameters (large populations)
 * NB: mention of master equations (deterministic equation summarizing stochastic model) 
+
+* Suggestion: decision tree: 
+  - do the processes vary across time and/or space? Yes/No?
+  - do the variable studied can vary a lot relative to its average (small or large populations) ? Yes/No ?
+  - if Yes -> stochastic model needed.
 
 ### Time: discrete – continuous 
 
@@ -56,8 +96,8 @@ How do the processes are structured along time?  when using discrete vs continuo
 
 ### Accounting for space 
 * **None vs spatial**: 
-  - TIB, example of space implicit; In none spatial models, space is assumed homogenous and the scale can be integrated within the units (example: pop density in ind/km2)
-  - When does the question need it explicit space? 
+  - In none spatial models, space is assumed homogenous and the scale can be integrated within the units (example: pop density in ind/km2)
+  - When does the question need explicit description of space? 
     - When spatial processes impact local dynamics of interest
     - if we are interested in patterns emerging at higher spatial scale from local processes
 * **Topology versus Distances explicit**: does geographical positions  matter or only topology?
@@ -94,6 +134,7 @@ What do we gain in making models simple? => Principle of parcimony
   - Overall idea: Balance between inputs and outputs. See with exponential model?
 
 * **Advantages / Disadvantages**:
+Computational versus mahematical skills
   - *ABM*: 
     + The dynamics emerge from elemental processes
     + Simpler to build from empirical knowledge
