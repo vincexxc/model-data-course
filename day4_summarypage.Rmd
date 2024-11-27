@@ -1,3 +1,8 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
 # Interaction networks, food webs, and complexity in ecology - one-page summary
 
 During this day on interaction networks, we will first (1) introduce the concepts and definitions associated with networks of interactions, and then tackle two general questions regarding interaction networks: (2) how to simplify complexity by considering random matrices to model interactions and (3) how to assess the link between complexity and dynamical stability in empirical data. As a conclusion to the thematic day, we will (4) delve into multiplex networks, i.e. networks combining interactions of different types.

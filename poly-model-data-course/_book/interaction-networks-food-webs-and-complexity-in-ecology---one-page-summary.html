@@ -4,13 +4,13 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Part 6 Spatial data (Day 3) | Theory-driven analysis of ecological data: a practical handbook</title>
+  <title>Part 8 Interaction networks, food webs, and complexity in ecology - one-page summary | Theory-driven analysis of ecological data: a practical handbook</title>
   <meta name="description" content="<p>This is a draft for our course on model-data.
 The HTML output format for this example is bookdown::gitbook,
 set in the _output.yml file.</p>" />
   <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Part 6 Spatial data (Day 3) | Theory-driven analysis of ecological data: a practical handbook" />
+  <meta property="og:title" content="Part 8 Interaction networks, food webs, and complexity in ecology - one-page summary | Theory-driven analysis of ecological data: a practical handbook" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="<p>This is a draft for our course on model-data.
@@ -19,7 +19,7 @@ set in the _output.yml file.</p>" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Part 6 Spatial data (Day 3) | Theory-driven analysis of ecological data: a practical handbook" />
+  <meta name="twitter:title" content="Part 8 Interaction networks, food webs, and complexity in ecology - one-page summary | Theory-driven analysis of ecological data: a practical handbook" />
   
   <meta name="twitter:description" content="<p>This is a draft for our course on model-data.
 The HTML output format for this example is bookdown::gitbook,
@@ -29,15 +29,15 @@ set in the _output.yml file.</p>" />
 <meta name="author" content="us" />
 
 
-<meta name="date" content="2024-11-25" />
+<meta name="date" content="2024-11-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="temporal-data-day-2.html"/>
-<link rel="next" href="interaction-networks-food-webs-and-complexity-in-ecology-day-4.html"/>
+<link rel="prev" href="interaction-networks-food-webs-and-complexity-in-ecology-day-4.html"/>
+
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -210,6 +210,7 @@ set in the _output.yml file.</p>" />
 </ul></li>
 <li class="chapter" data-level="7.7" data-path="interaction-networks-food-webs-and-complexity-in-ecology-day-4.html"><a href="interaction-networks-food-webs-and-complexity-in-ecology-day-4.html#literature"><i class="fa fa-check"></i><b>7.7</b> Literature</a></li>
 </ul></li>
+<li class="chapter" data-level="8" data-path="interaction-networks-food-webs-and-complexity-in-ecology---one-page-summary.html"><a href="interaction-networks-food-webs-and-complexity-in-ecology---one-page-summary.html"><i class="fa fa-check"></i><b>8</b> Interaction networks, food webs, and complexity in ecology - one-page summary</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -230,70 +231,22 @@ set in the _output.yml file.</p>" />
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="spatial-data-day-3" class="section level1 hasAnchor" number="6">
-<h1><span class="header-section-number">Part 6</span> Spatial data (Day 3)<a href="spatial-data-day-3.html#spatial-data-day-3" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="introduction-1" class="section level2 hasAnchor" number="6.1">
-<h2><span class="header-section-number">6.1</span> Introduction<a href="spatial-data-day-3.html#introduction-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Comapre to Day 2, we will increase scale to consider</p>
-<p>Definition of a community and examples</p>
-<p>The typical spatial dataset: a community matrix (sites*species), with either presence/absence, or detection/non detection, or abundance, or presence only, data
-We might also have additional data: species traits, environmental variables, phylogenetic relationships</p>
-<p>The typical questions we want to address</p>
-</div>
-<div id="theoretical-frameworks-toattack-these-issues" class="section level2 hasAnchor" number="6.2">
-<h2><span class="header-section-number">6.2</span> Theoretical frameworks toattack these issues<a href="spatial-data-day-3.html#theoretical-frameworks-toattack-these-issues" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>We present three general frameworks used in this context:
-– The habitat filtering approach
-– The metacommunity framework
-– Vellend’s community ecology theory framework
-We list strengths/advantages for each framework
-We point to this <a href="https://reflectionsonpaperspast.wordpress.com/">cool website</a> for reflections from Vellend and Leibold on the fundamental publications introducing frameworks (2) and (3)</p>
-</div>
-<div id="data-driven-statistical-approaches" class="section level2 hasAnchor" number="6.3">
-<h2><span class="header-section-number">6.3</span> DATA-DRIVEN (STATISTICAL) APPROACHES<a href="spatial-data-day-3.html#data-driven-statistical-approaches" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="community-level-methods" class="section level3 hasAnchor" number="6.3.1">
-<h3><span class="header-section-number">6.3.1</span> Community level methods<a href="spatial-data-day-3.html#community-level-methods" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Unconstrained do not directly use environmental variables: a posteriori associations (PCA…)
-Constrained methods simultaneously consider species composition and environmental descriptors (RDA…)
-Short focus on Cottenie’s approach of partitioning variance (partialRDA + PCNM) with examples from mollusk communities in the French Antilles
-### Species level methods
-Permutation approaches, the Cscore, etc.. ==&gt; make a connection with Day 4 here (networks and permutations)
-We mention the fact that even without interactions, several processes may yield spurious species associations (e.g. Calcagno et al. 2022)
-Species Distribution Models
-Occupancy models: their hallmark is to add a detection layer (probability to detect a species when it is present). We will talk more about this in the next section (mechanistic approaches)</p>
-</div>
-</div>
-<div id="process-driven-mechanistic-approaches" class="section level2 hasAnchor" number="6.4">
-<h2><span class="header-section-number">6.4</span> PROCESS-DRIVEN (MECHANISTIC) APPROACHES<a href="spatial-data-day-3.html#process-driven-mechanistic-approaches" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="patch-occupancy-models" class="section level3 hasAnchor" number="6.4.1">
-<h3><span class="header-section-number">6.4.1</span> Patch-occupancy models<a href="spatial-data-day-3.html#patch-occupancy-models" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>We start by introducing the two simplest and historically important models! Levins (1969) and McArthur &amp; Wilson (1967) models.
-We highlight the mathematical connection between Levins’ model and the logistic model seen on the previous Day
-There is an intrinsic covariation of r and K in this formulation!
-We compute the equilibrium occupancies in the two models
-We introduce the MW model of island biogeography: why are the curves non linear? We make them reflect on this, and ton the role of species trait variation in (c,e)
-We present the example of fitting this model to island presence/absence data: data from Manne et al. (1998) J. Anim. Ecol.</p>
-<p>We then discuss possible extensions:
-– explicit space (IFM models from Hanski and followers)
-– competition/colonization trade-offs, spatial networks, trophic webs…</p>
-<p>### Models with explicit abundance dynamics in patches
-These models quickly become complicated and need to be simulated.
-One exception is Hubbel’s neutral model, which has a dynamics for species abundances in patches and remains reasonably tractable
-One example of simulation framework for metacommunities is Thompson et al. (2020) Ecology Letters. This is the one we will use to simulate data in the afternoon practical.</p>
-</div>
-</div>
-<div id="conclusion-1" class="section level2 hasAnchor" number="6.5">
-<h2><span class="header-section-number">6.5</span> Conclusion<a href="spatial-data-day-3.html#conclusion-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="interaction-networks-food-webs-and-complexity-in-ecology---one-page-summary" class="section level1 hasAnchor" number="8">
+<h1><span class="header-section-number">Part 8</span> Interaction networks, food webs, and complexity in ecology - one-page summary<a href="interaction-networks-food-webs-and-complexity-in-ecology---one-page-summary.html#interaction-networks-food-webs-and-complexity-in-ecology---one-page-summary" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>During this day on interaction networks, we will first (1) introduce the concepts and definitions associated with networks of interactions, and then tackle two general questions regarding interaction networks: (2) how to simplify complexity by considering random matrices to model interactions and (3) how to assess the link between complexity and dynamical stability in empirical data. As a conclusion to the thematic day, we will (4) delve into multiplex networks, i.e. networks combining interactions of different types.</p>
+<p>The introductory course covers a variety of topics including networks and their definition, their representation as matrix and their interpretation in dynamical model. Notable theoretical results based on network properties are then reviewed, including results on stability and feasibility, the search for invariant properties structuring the topology of empirical networks, and the general framework of robustness studies, i.e. studies aimed at understanding how species removal affect the rest of the network through cascading extinctions. The introductory course is concluded by a primer on network statistics commonly used to characterize interaction networks, including degree distributions, the randomizations used to generate null predictions, and the models used to assess groups of species interacting in the same way or interacting in a nested fashion.</p>
+<p>The simplification of complexity through large ecosystems and random matrices is then presented in a series of steps. The emerging simplicity of systems comprising many species is explained, with a particular focus on some fingerprint properties that could characterize the predictions of competing models. The use of random interaction matrix can be considered as a shortcut to obtaining such properties, as well as a path to analytical tractability of complex disordered systems.</p>
+<p>The link between complexity and stability of empirical food webs is the focus of the third part of the day. By using simple relationships between interaction coefficients and biomasses, and then computing Jacobian matrices, which characterize system stability, the complexity-stability relationship of empirical food webs can be compared with that of their randomized counterparts, which in turn allows for a close examination of ecological hypotheses explaining food web stability.</p>
+<p>The last presentation of the day introduces multiplex networks of interactions, i.e. networks in which several types of interactions are represented together. Following on the idea of keystone predators, as introduced by the work of R. Paine on intertidal communities, the modulation of trophic interactions and species parameters by non-trophic interactions is explored through dynamical models confronted with existing data on intertidal systems with both competition and resource consumption. The parallel topologies of trophic and non-trophic interaction networks are then gauged through block models and random network models in order to assess the effect of network structure on food web feasibility, stability and total biomass.</p>
 
-</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="temporal-data-day-2.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="interaction-networks-food-webs-and-complexity-in-ecology-day-4.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="interaction-networks-food-webs-and-complexity-in-ecology-day-4.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -324,7 +277,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/05-Spatial-data.Rmd",
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/day4_summarypage.Rmd",
 "text": "Edit"
 },
 "history": {
