@@ -1,5 +1,30 @@
 # Temporal data (Day 2)
 
 ## Introduction
+In ecology and evolution we may encounter data collected over time, such as population density time-series. Faced with this kind of data, we have fundamentally two options for analysis: 
+First, a purely statistical approch with methods such as ARIMA. 
+Second, we could use the large body of theory from population and community ecology that allows us to formulate relationships between densities and time from theoretically established principles.
 
-## Conclusion
+Here, we will focus on the latter and a recent example of such an approach can be found, for example in Sibly et al. 2005 who study the shape of density-dendependence confronting a theta-logistic model with time-series data from the Global Population Density Database.
+
+## Building a pop dyn model
+
+As we have seen in the first day, a population dynamics model fundamentally is a bookkeeping exercise that foamlizes inputs (e.g., births) and outputs (e.g., deaths). 
+We will see this using the logistic model in its r-K- (Pianka) and in its r-alpha (Verhulst) formulation (see Mallet 2012).
+We will dive more deeply into the logistc by trying to derive it assuming either competition for food resources or for space.
+
+
+## Confronting with data
+
+After this exercise of model building, we will learn how to confront such models with data focusing on the statistical interface using a Bayesian approach (stan, rstan). Besides diving into code we will explore error types and data structure complexity.
+
+The afternoon will be dedicated to a hands-on exercise for fitting time-series data to different dynamics models.
+
+## Two papers for student project
+
+* Yoshida et al.
+* 
+
+## References
+Mallet 2012
+Sibly et al. 2005
