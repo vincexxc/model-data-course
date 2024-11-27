@@ -1,0 +1,95 @@
+\contentsline {chapter}{\numberline {1}About Bookdown}{5}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Usage}{5}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Render book}{5}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Preview book}{6}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Here are some useful things for writing the book using bookdown}{6}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}A section}{6}{subsection.1.4.1}%
+\contentsline {subsubsection}{An unnumbered section}{6}{section*.2}%
+\contentsline {section}{\numberline {1.5}Cross-references}{6}{section.1.5}%
+\contentsline {subsection}{\numberline {1.5.1}Chapters and sub-chapters}{6}{subsection.1.5.1}%
+\contentsline {subsection}{\numberline {1.5.2}Captioned figures and tables}{7}{subsection.1.5.2}%
+\contentsline {section}{\numberline {1.6}Parts}{7}{section.1.6}%
+\contentsline {section}{\numberline {1.7}Footnotes and citations}{8}{section.1.7}%
+\contentsline {subsection}{\numberline {1.7.1}Footnotes}{8}{subsection.1.7.1}%
+\contentsline {subsection}{\numberline {1.7.2}Citations}{8}{subsection.1.7.2}%
+\contentsline {section}{\numberline {1.8}Blocks}{8}{section.1.8}%
+\contentsline {subsection}{\numberline {1.8.1}Equations}{8}{subsection.1.8.1}%
+\contentsline {subsection}{\numberline {1.8.2}Theorems and proofs}{8}{subsection.1.8.2}%
+\contentsline {subsection}{\numberline {1.8.3}Callout blocks}{9}{subsection.1.8.3}%
+\contentsline {section}{\numberline {1.9}Sharing your book}{9}{section.1.9}%
+\contentsline {subsection}{\numberline {1.9.1}Publishing}{9}{subsection.1.9.1}%
+\contentsline {subsection}{\numberline {1.9.2}404 pages}{9}{subsection.1.9.2}%
+\contentsline {subsection}{\numberline {1.9.3}Metadata for sharing}{9}{subsection.1.9.3}%
+\contentsline {chapter}{\numberline {2}Preambule}{11}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Why mathematical models? (Sonia)}{13}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Big data}{13}{section.3.1}%
+\contentsline {section}{\numberline {3.2}What is theory?}{14}{section.3.2}%
+\contentsline {section}{\numberline {3.3}What's a model?}{14}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Purpose of science?}{15}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Can we do that with big data analysis?}{16}{section.3.5}%
+\contentsline {section}{\numberline {3.6}The scientific method}{16}{section.3.6}%
+\contentsline {section}{\numberline {3.7}A feedback loop involving data and models}{17}{section.3.7}%
+\contentsline {chapter}{\numberline {4}What types of theoretical models in ecology? (Isa)}{19}{chapter.4}%
+\contentsline {section}{\numberline {4.1}What system? What question? What hypotheses (no maths shown here)}{19}{section.4.1}%
+\contentsline {section}{\numberline {4.2}What model formalism? (no maths shown here)}{20}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Deterministic -- stochastic processes}{20}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Time: discrete -- continuous}{20}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Accounting for space}{21}{subsection.4.2.3}%
+\contentsline {section}{\numberline {4.3}What technical choices?}{21}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Analytical -- Numerical}{21}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Rules versus Maths}{22}{subsection.4.3.2}%
+\contentsline {section}{\numberline {4.4}Some classical models used in ecology and seen next days}{23}{section.4.4}%
+\contentsline {chapter}{\numberline {5}How to build a model? (Isa)}{25}{chapter.5}%
+\contentsline {chapter}{\numberline {6}How to analyze a model? (Isa)}{27}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Temporal data (Day 2)}{29}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Introduction}{29}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Conclusion}{29}{section.7.2}%
+\contentsline {chapter}{\numberline {8}Spatial data (Day 3)}{31}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Introduction}{31}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Theoretical frameworks toattack these issues}{31}{section.8.2}%
+\contentsline {section}{\numberline {8.3}DATA-DRIVEN (STATISTICAL) APPROACHES}{31}{section.8.3}%
+\contentsline {subsection}{\numberline {8.3.1}Community level methods}{31}{subsection.8.3.1}%
+\contentsline {section}{\numberline {8.4}PROCESS-DRIVEN (MECHANISTIC) APPROACHES}{32}{section.8.4}%
+\contentsline {subsection}{\numberline {8.4.1}Patch-occupancy models}{32}{subsection.8.4.1}%
+\contentsline {section}{\numberline {8.5}Conclusion}{32}{section.8.5}%
+\contentsline {chapter}{\numberline {9}Interaction networks, food webs, and complexity in ecology (Day 4)}{33}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Preamble of the script used during the course}{33}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Networks and associated definitions}{36}{section.9.2}%
+\contentsline {subsection}{\numberline {9.2.1}What is a network?}{36}{subsection.9.2.1}%
+\contentsline {subsection}{\numberline {9.2.2}Networks in ecology}{36}{subsection.9.2.2}%
+\contentsline {subsection}{\numberline {9.2.3}Ecological interaction networks}{36}{subsection.9.2.3}%
+\contentsline {subsection}{\numberline {9.2.4}A little history}{36}{subsection.9.2.4}%
+\contentsline {subsection}{\numberline {9.2.5}Types of network}{36}{subsection.9.2.5}%
+\contentsline {subsubsection}{\numberline {9.2.5.1}Unipartite networks}{36}{subsubsection.9.2.5.1}%
+\contentsline {subsubsection}{\numberline {9.2.5.2}Multipartite networks}{37}{subsubsection.9.2.5.2}%
+\contentsline {section}{\numberline {9.3}Representation of networks}{38}{section.9.3}%
+\contentsline {subsection}{\numberline {9.3.1}Binary networks}{38}{subsection.9.3.1}%
+\contentsline {subsection}{\numberline {9.3.2}Weighted networks}{39}{subsection.9.3.2}%
+\contentsline {subsection}{\numberline {9.3.3}Network matrices}{40}{subsection.9.3.3}%
+\contentsline {subsection}{\numberline {9.3.4}Matrices for multipartite networks}{40}{subsection.9.3.4}%
+\contentsline {subsection}{\numberline {9.3.5}Degrees}{41}{subsection.9.3.5}%
+\contentsline {subsection}{\numberline {9.3.6}Connectance}{41}{subsection.9.3.6}%
+\contentsline {section}{\numberline {9.4}Crash course: matrices, eigenvalues, Jacobian matrix}{42}{section.9.4}%
+\contentsline {subsection}{\numberline {9.4.1}Crash course: matrices}{42}{subsection.9.4.1}%
+\contentsline {subsection}{\numberline {9.4.2}Crash course: matrix eigenvalues}{42}{subsection.9.4.2}%
+\contentsline {subsection}{\numberline {9.4.3}Crash course: Jacobian matrices}{43}{subsection.9.4.3}%
+\contentsline {section}{\numberline {9.5}Theories and notable results}{44}{section.9.5}%
+\contentsline {subsection}{\numberline {9.5.1}Lotka-Volterra and networks}{44}{subsection.9.5.1}%
+\contentsline {subsection}{\numberline {9.5.2}May's stability result}{44}{subsection.9.5.2}%
+\contentsline {subsection}{\numberline {9.5.3}Feasibility vs.\nobreakspace {}stability}{46}{subsection.9.5.3}%
+\contentsline {subsection}{\numberline {9.5.4}Food web invariants}{46}{subsection.9.5.4}%
+\contentsline {subsection}{\numberline {9.5.5}Generating the niche model}{47}{subsection.9.5.5}%
+\contentsline {subsection}{\numberline {9.5.6}Robustness to secondary extinctions}{47}{subsection.9.5.6}%
+\contentsline {section}{\numberline {9.6}A quick primer on network statistics}{50}{section.9.6}%
+\contentsline {subsection}{\numberline {9.6.1}Degree distributions}{50}{subsection.9.6.1}%
+\contentsline {subsection}{\numberline {9.6.2}Null models / randomizations}{52}{subsection.9.6.2}%
+\contentsline {subsection}{\numberline {9.6.3}Network structure}{53}{subsection.9.6.3}%
+\contentsline {subsection}{\numberline {9.6.4}Modularity}{54}{subsection.9.6.4}%
+\contentsline {subsubsection}{\numberline {9.6.4.1}Modularity of the empirical food web}{55}{subsubsection.9.6.4.1}%
+\contentsline {subsubsection}{\numberline {9.6.4.2}Which algorithm?}{56}{subsubsection.9.6.4.2}%
+\contentsline {subsection}{\numberline {9.6.5}Block models}{56}{subsection.9.6.5}%
+\contentsline {subsection}{\numberline {9.6.6}Modularity and blocks}{61}{subsection.9.6.6}%
+\contentsline {subsection}{\numberline {9.6.7}Spectral clustering}{64}{subsection.9.6.7}%
+\contentsline {subsection}{\numberline {9.6.8}Nestedness}{65}{subsection.9.6.8}%
+\contentsline {subsection}{\numberline {9.6.9}Last words}{65}{subsection.9.6.9}%
+\contentsline {section}{\numberline {9.7}Literature}{66}{section.9.7}%

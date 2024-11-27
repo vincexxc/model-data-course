@@ -19,6 +19,7 @@ The strength of process-based model in general: we capture ecological mechanisms
 
 Possibility of nesting several process-based models in a broader framework (e.g., niche model to get the topology and then use this topology in a dynamical food web model.
 
+Mechanistic models: can prove the functioning of a model: cycles can happen or not, based on the properties of the model.
 
 * Trade-offs:
   - simple versus complex (number of variables and parameters, number of mechanisms...) (--> complex models are not useful if not enough data. Principle of parsimony)
@@ -203,6 +204,53 @@ A Rmarkdown file is available to provide the code of the illustrations of  secti
   - Exhaustivity is possible	(tractable)
   - We know the values of parameters from empirical data => allows us to fix or restrain the range of some parameters.
   - Sensitivity analysis: effect size when varying 10% each parameter + look if conclusions are modified if the most sensitive parameters are varied.
+
+
+
+
+Messages de conclusion de la journée ?
+
+- data-driven versus process-based ?
+
+- si on leur donne des jeux de données pour la journée 5: discuter avec eux des forces et faiblesses (biaias d'observations, que des donnes de présences). Comment faire avec des données imparfaites ?
+
+- nombre de points de données versus dimensionalité du modèle ?
+
+- notion de données effectives: e.g. distance suffisante entre les points d'échantillonages, sans autocorrélation.
+
+Journée 5: trouver des jeux de données: 
+
+Un graphe qui montre la quantité de données nécessaires versus complexité du modèle:
+
+Reprendre l'exemple de
+
+Calcul de puissance ?
+
+
+Journée 5:
+
+Faire des groupes dès le début la semaine (5 groupes)
+
+On leur donne des papiers purement empiriques 
+
+jeux de données (ou les leurs) ou des papiers empiriques à utiliser.
+
+- 6 papiers avec process-based model et jeu de donnée déjà analysé ou papier purement empirique mais avec et questions de recherche et données dispo pour construire un modèle
+
+
+Objectif de la journée 5: mise en pratique, avec emphase sur 
+
+- répondre à une question commune en écologie à partir d'un jeu de données classique et d'un modèle
+
+- donner des papiers purement empiriques, sans modèle. Pouvez-vous construire un modèle qui permet de conceptualiser les mécanismes qui sont discuter
+    - Trouver des papiers (6) ou des jeux de données:résultats d'expériences par exemple.
+
+
+- TD accompagnés ? 
+
+
+
+
 
 
 
