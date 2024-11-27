@@ -1,0 +1,86 @@
+# Temporal data (Day 2)
+
+## Introduction
+In ecology and evolution we may encounter data collected over time, such as population density time-series. Faced with this kind of data, we have fundamentally two options for analysis: 
+First, a purely statistical approch with methods such as ARIMA. 
+Second, we could use the large body of theory from population and community ecology that allows us to formulate relationships between densities and time from theoretically established principles.
+
+Here, we will focus on the latter and an example of such an approach can be found, for example in Sibly et al. 2005 who study the shape of density-dendependence confronting a theta-logistic model with time-series data from the Global Population Density Database.
+
+## Building a population dynamics model
+
+As we have seen in the first day, a population dynamics model fundamentally is a bookkeeping exercise that foamlizes inputs (e.g., births) and outputs (e.g., deaths). 
+We will see this using the logistic model in its r-K- (Pianka) and in its r-alpha (Verhulst) formulation (see Mallet 2012).
+We will dive more deeply into the logistc by trying to derive it assuming either competition for food resources or for space.
+
+
+## Confronting model with data
+
+After this exercise of model building, we will learn how to confront such models with data focusing on the statistical interface using a Bayesian approach (stan, rstan). Besides diving into code we will explore error types (observation error, process error) and data structure complexity.
+
+The afternoon will be dedicated to a hands-on exercise for fitting time-series data to different dynamics models. Details can be found e.g. in Rosenbaum \& Fronhofer (2023).
+
+## Two papers for student project on Friday
+
+* Yoshida et al. 2003
+* Gause 1934
+
+## References
+
+@Article{Gause1934,
+  author    = {Gause, G. F.},
+  title     = {Experimental analysis of Vito Volterra’s mathematical theory of the struggle for existence},
+  journal   = {Science},
+  year      = {1934},
+  volume    = {79},
+  pages     = {16--17},
+}
+
+@Article{Mallet2012,
+  author    = {Mallet, J.},
+  title     = {The struggle for existence: how the notion of carrying capacity, {K}, obscures the links between demography, {D}arwinian evolution, and speciation},
+  journal   = {Evol. Ecol. Res.},
+  year      = {2012},
+  volume    = {14},
+  number    = {5},
+  pages     = {627--665},
+}
+
+@Article{Rosenbaum2023,
+  author       = {Benjamin Rosenbaum and Emanuel A. Fronhofer},
+  journal      = {Ecosphere},
+  title        = {Confronting population models with experimental microcosm data: from trajectory matching to state-space models},
+  year         = {2023},
+  number       = {4},
+  pages        = {e4503},
+  volume       = {14},
+  data_doi     = {https://doi.org/10.5281/zenodo.7702324},
+  doi          = {10.1002/ecs2.4503},
+}
+
+@Article{Sibly2005,
+  author    = {Richard M. Sibly and Daniel Barker and Michael C. Denham and Jim Hone and Mark Pagel},
+  title     = {On the Regulation of Populations of Mammals, Birds, Fish, and Insects},
+  journal   = {Science},
+  year      = {2005},
+  volume    = {309},
+  number    = {5734},
+  pages     = {607--610},
+  month     = {Jul},
+  issn      = {1095-9203},
+  doi       = {10.1126/science.1110760},
+  url       = {http://dx.doi.org/10.1126/science.1110760},
+}
+
+@Article{Yoshida2003,
+  author    = {Yoshida, Takehito and Jones, Laura E. and Ellner, Stephen P. and Fussmann, Gregor F. and Hairston, Nelson G.},
+  title     = {Rapid evolution drives ecological dynamics in a predator–prey system},
+  journal   = {Nature},
+  year      = {2003},
+  volume    = {424},
+  number    = {6946},
+  pages     = {303--306},
+  issn      = {0028-0836},
+  doi       = {10.1038/nature01767},
+  url       = {http://dx.doi.org/10.1038/nature01767},
+}
